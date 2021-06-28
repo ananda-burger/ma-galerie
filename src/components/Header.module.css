@@ -1,0 +1,18 @@
+a {
+    color:  darkred;
+}
+
+.head {
+    display:  flex;
+    background-color:  lightblue;
+}
+
+.navigation {
+    display:  flex;
+    align-items:  center;
+    justify-content:  flex-end;
+}
+
+.navigation a, .navigation p {
+    padding:  10px;
+}

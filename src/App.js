@@ -1,6 +1,13 @@
+import Layout from './components/layout/Layout.js'
+import Header from './components/Header.js'
+import MainNavigation from './components/MainNavigation.js'
+
 const App = () => {
   return (
-    <div>Hello</div>
+      <Layout>
+      <Header/>
+      <MainNavigation/>
+      </Layout>
   )
 }
 
