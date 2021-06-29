@@ -4,9 +4,9 @@ import classes from './MainNavigation.module.css'
 const MainNavigation = () => {
   return (
     <header className={classes.head}>
-      <Link to="/" className={classes.title}>
-        My Pictures
-      </Link>
+      <div className={classes.title}>
+        <Link to="/">My Pictures</Link>
+      </div>
       <Link to="/new-picture" className={classes.nav}>
         Add
       </Link>
