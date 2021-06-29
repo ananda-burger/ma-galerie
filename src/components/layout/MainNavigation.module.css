@@ -26,15 +26,15 @@ a {
 }
 
 .title {
-    /* font-family: 'Fredoka One', cursive; */
-    /* color:  #444ab0; */
     color:  black;
-    font-size:  2rem;
+    font-size:  25.6px;
+    font-size:  1.6rem;
     position:  absolute;
     left:  50%;
     top: 50%;
     transform:  translateX(-50%) translateY(-50%);
 }
+
 .head ul {
     list-style:  none;
     display:  flex;
@@ -42,9 +42,9 @@ a {
 }
 
 .head li, .menu {
-    font-size:  16px;
-    font-size:  1rem;
-    margin:  0 15px;
+    font-size:  12.8px;
+    font-size:  0.8rem;
+    margin:  0 5px;
 }
 
 .navigation {
@@ -55,4 +55,23 @@ a {
 
 .navigation a, .navigation p {
     padding:  10px;
+}
+
+@media (min-width: 540px) {
+    .title {
+        color:  black;
+        font-size:  32px;
+        font-size:  2rem;
+        position:  absolute;
+        left:  50%;
+        top: 50%;
+        transform:  translateX(-50%) translateY(-50%);
+    }
+
+    .head li, .menu {
+        font-size:  16px;
+        font-size:  1rem;
+        margin:  0 5px;
+    }
+
 }

@@ -3,14 +3,24 @@ import ImagesList from '../components/images/ImagesList.js'
 const PICTURES = [
   {
     id: 1,
-    image: 'http://ae01.alicdn.com/kf/H2e9cbf4dbdb44e7abbb20fd3d1bf6053m.jpg',
-    title: 'A nice sofa'
+    image: 'https://wallpapercave.com/wp/wp4302820.jpg',
+    title: 'A nice pink background'
   },
   {
     id: 2,
+    image: 'https://wallpaperaccess.com/full/1138983.jpg',
+    title: 'A tron inspired image'
+  },
+  {
+    id: 3,
     image:
-      'https://previews.123rf.com/images/olechkaolia/olechkaolia2002/olechkaolia200200042/140103429-simple-black-and-white-minimalist-pattern-design-abstract-square-background-with-different-geometric.jpg',
-    title: 'Quadrados legais'
+      'https://uhdwallpapers.org/uploads/converted/19/08/03/huawei-mediapad-m6-stock-wallpaper-1024x1024_666874-mm-90.jpg',
+    title: 'Another tron inspired image'
+  },
+  {
+    id: 4,
+    image: 'https://cdn.wallpapersafari.com/21/87/qjJXvV.jpg',
+    title: 'A nice geometric image'
   }
 ]
 

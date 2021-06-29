@@ -6,3 +6,13 @@ button {
     display:  flex;
     justify-content:  space-between;
 }
+
+.image {
+    display:  flex;
+    flex-wrap:  wrap;
+}
+
+.image img {
+    width:  30%;
+    height:  30%;
+}
