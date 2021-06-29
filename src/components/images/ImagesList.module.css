@@ -3,22 +3,34 @@
     flex-wrap:  wrap;
 }
 
-
 .item {
-    box-sizing:  border-box;
+    /* box-sizing:  border-box; */
+/*     width:  100%; */
+/*     min-width:  200px; */
+/*     height:  100%; */
+/*     padding:  2.5px 5px; */
+}
+
+.image {
     width:  100%;
-    min-width:  200px;
-    height:  100%;
-    padding:  2.5px 5px;
+    display:  block;
+}
+
+.item:hover {
+    opacity:  0.5;
+}
+
+.text {
+    color:  white;
 }
 
 @media (min-width: 420px) {
     .item {
-        box-sizing:  border-box;
+        /* box-sizing:  border-box; */
         width:  50%;
-        min-width:  200px;
-        height:  100%;
-        padding:  5px;
+        /* min-width:  200px; */
+        /* height:  100%; */
+        /* margin:  5px; */
     }
 
 }

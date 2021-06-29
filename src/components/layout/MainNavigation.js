@@ -6,7 +6,7 @@ const MainNavigation = () => {
     <header className={classes.head}>
       <div>
         <Link to="/contact" className={classes.menu}>
-          Menu
+          Contact
         </Link>
       </div>
       <div>
