@@ -4,24 +4,18 @@ import classes from './MainNavigation.module.css'
 const MainNavigation = () => {
   return (
     <header className={classes.head}>
-      <div>
-        <Link to="/contact" className={classes.menu}>
-          Contact
-        </Link>
-      </div>
-      <div>
-        <Link to="/" className={classes.title}>
-          My Pictures
-        </Link>
-      </div>
-      <ul>
-        <li>
-          <Link to="/new-picture">Add</Link>
-        </li>
-        <li>
-          <Link to="/favorites">Favs</Link>
-        </li>
-      </ul>
+      <Link to="/" className={classes.title}>
+        My Pictures
+      </Link>
+      <Link to="/new-picture" className={classes.nav}>
+        Add
+      </Link>
+      <Link to="/favorites" className={classes.nav}>
+        Favs
+      </Link>
+      <Link to="/contact" className={classes.nav}>
+        Contact
+      </Link>
     </header>
   )
 }

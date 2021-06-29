@@ -6,13 +6,8 @@ const ImagesList = (props) => {
     <ul className={classes.list}>
       {props.images.map((img) => {
         return (
-          <li className={classes.item}>
-            <img
-              key={img.id}
-              src={img.image}
-              alt={img.title}
-              className={classes.image}
-            />
+          <li key={img.id} className={classes.item}>
+            <img src={img.image} alt={img.title} className={classes.image} />
           </li>
         )
       })}

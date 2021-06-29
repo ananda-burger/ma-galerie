@@ -12,29 +12,22 @@ a {
     position:  sticky;
     top:  0;
     width:  100%;
-    height:  50px;
+    height:  3rem;
+    z-index:  9999;
 }
 
 .title {
     color:  black;
     font-size:  25.6px;
     font-size:  1.6rem;
-    position:  absolute;
-    left:  50%;
-    top: 50%;
-    transform:  translateX(-50%) translateY(-50%);
+    flex-grow:  1;
+    margin-left:  0.5rem;
 }
 
-.head ul {
-    list-style:  none;
-    display:  flex;
-    align-items:  baseline;
-}
-
-.head li, .menu {
+.nav {
     font-size:  12.8px;
     font-size:  0.8rem;
-    margin:  0 5px;
+    margin-right:  0.5rem;
 }
 
 .navigation {
@@ -52,16 +45,14 @@ a {
         color:  black;
         font-size:  32px;
         font-size:  2rem;
-        position:  absolute;
-        left:  50%;
-        top: 50%;
-        transform:  translateX(-50%) translateY(-50%);
+        flex-grow:  1;
+        margin-left:  1rem;
     }
 
-    .head li, .menu {
+    .nav {
         font-size:  16px;
         font-size:  1rem;
-        margin:  0 5px;
+        margin-right:  1rem;
     }
 
 }
