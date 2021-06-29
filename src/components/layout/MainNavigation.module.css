@@ -9,13 +9,13 @@ body {
 }
 
 a {
-    color:  darkred;
+    color:  black;
+    /* color: #ce58b1; */
     text-decoration:  none;
 }
 
 .head {
-    opacity:  80%;
-    background-color:  lightblue;
+    background-color:  white;
     display:  flex;
     align-items:  center;
     justify-content:  space-between;
@@ -27,6 +27,8 @@ a {
 
 .title {
     /* font-family: 'Fredoka One', cursive; */
+    /* color:  #444ab0; */
+    color:  black;
     font-size:  2rem;
     position:  absolute;
     left:  50%;
