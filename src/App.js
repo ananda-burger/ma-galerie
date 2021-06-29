@@ -1,9 +1,9 @@
 // import Layout from './components/layout/Layout.js'
 // import Header from './components/Header.js'
 import MainNavigation from './components/layout/MainNavigation.js'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
-import Intro from './components/layout/Intro.s'
+import Intro from './components/layout/Intro.js'
 import AllPicturesPage from './pages/AllPictures.js'
 import ContactPage from './pages/Contact.js'
 import FavoritesPage from './pages/Favorites.js'
@@ -12,22 +12,22 @@ import NewPicturePage from './pages/NewPicture.js'
 const App = () => {
   return (
     <div>
-      <Intro/>
+      <Intro />
       <MainNavigation />
-      <Route path='/' exact>
+      <Route path="/" exact>
         <AllPicturesPage />
       </Route>
-      <Route path='/favorites'>
+      <Route path="/favorites">
         <FavoritesPage />
       </Route>
-      <Route path='/contact'>
+      <Route path="/contact">
         <ContactPage />
       </Route>
-      <Route path='/new-picture'>
+      <Route path="/new-picture">
         <NewPicturePage />
       </Route>
     </div>
   )
 }
 
-export default App;
+export default App
