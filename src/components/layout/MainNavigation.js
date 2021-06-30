@@ -5,7 +5,7 @@ const MainNavigation = () => {
   return (
     <header className={classes.head}>
       <div className={classes.title}>
-        <Link to="/">My Pictures</Link>
+        <Link to="/">Ma Galerie</Link>
       </div>
       <Link to="/new-picture" className={classes.nav}>
         Add

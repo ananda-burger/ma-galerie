@@ -52,7 +52,6 @@
         top: 60%;
         transform:  translateX(-50%);
         opacity:  0;
-        text-align:  center;
     }
 
     .item:hover .image {
