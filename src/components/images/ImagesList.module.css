@@ -23,7 +23,6 @@
     opacity:  1;
 }
 
-
 @media (min-width: 420px) {
 
     .text {
@@ -38,18 +37,30 @@
         text-align:  center;
     }
 
-
-    .item:hover .image {
-        opacity:  0.6;
-    }
-
-    .item:hover .text {
-        opacity:  1;
-    }
-
     .list {
         display:  grid;
         grid-template-columns:  1fr 1fr;
         grid-gap: 0.3rem;
     }
+
+    .likes {
+        color:  black;
+        background-color: transparent;
+        border-width:  1.5px;
+        position:  absolute;
+        left:  50%;
+        top: 60%;
+        transform:  translateX(-50%);
+        opacity:  0;
+        text-align:  center;
+    }
+
+    .item:hover .image {
+        opacity:  0.6;
+    }
+
+    .item:hover .text , .item:hover .likes {
+        opacity:  1;
+    }
+
 }
