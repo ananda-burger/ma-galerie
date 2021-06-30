@@ -8,6 +8,7 @@ const ImagesList = (props) => {
         return (
           <li key={img.id} className={classes.item}>
             <img src={img.image} alt={img.title} className={classes.image} />
+            <div className={classes.text}>{img.title}</div>
           </li>
         )
       })}
