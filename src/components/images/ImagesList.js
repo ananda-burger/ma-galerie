@@ -9,7 +9,10 @@ const ImagesList = (props) => {
           <li key={img.id} className={classes.item}>
             <img src={img.image} alt={img.title} className={classes.image} />
             <div className={classes.text}>{img.title}</div>
-            <button onClick={console.log('cliquei!')} className={classes.likes}>
+            <button
+              onClick={() => console.log('cliquei!')}
+              className={classes.likes}
+            >
               ♡
             </button>
           </li>
