@@ -14,4 +14,11 @@ const filterImages = (images, selectedFilter) => {
   return filteredImages
 }
 
-export { filterImages }
+const toggleLike = (images, id) => {
+  const updatedImages = [...images]
+  const index = updatedImages.findIndex((image) => image.id === id)
+  updatedImages[index].likes = !updatedImages[index].likes
+  return updatedImages
+}
+
+export { filterImages, toggleLike }

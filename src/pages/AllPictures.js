@@ -1,17 +1,16 @@
 import FullHeart from '../components/icons/FullHeart.js'
 import HollowHeart from '../components/icons/HollowHeart.js'
 import classes from './AllPictures.module.css'
-import { filterImages } from '../domain/images.js'
+import * as imageDomain from '../domain/image.js'
 
 const AllPicturesPage = (props) => {
-  const filteredImages = filterImages(props.images, props.selectedFilter)
+  const filteredImages = imageDomain.filterImages(
+    props.images,
+    props.selectedFilter
+  )
 
   const toggleLike = (id) => {
-    const index = props.images.findIndex((image) => image.id === id)
-    props.images[index].likes = !props.images[index].likes
-    const updatedImages = [...props.images]
-
-    props.setImages(updatedImages)
+    props.setImages(imageDomain.toggleLike(props.images, id))
   }
 
   return (
