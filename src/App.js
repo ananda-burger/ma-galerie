@@ -44,6 +44,7 @@ const PICTURES = [
 
 const App = () => {
   const [selectedFilter, setSelectedFilter] = useState('all')
+  const [selectedBoardFilter, setSelectedBoardFilter] = useState([])
   const [images, setImages] = useState(PICTURES)
 
   return (
@@ -52,6 +53,8 @@ const App = () => {
       <MainNavigation
         selectedFilter={selectedFilter}
         setSelectedFilter={setSelectedFilter}
+        selectedBoardFilter={selectedBoardFilter}
+        setSelectedBoardFilter={setSelectedBoardFilter}
       />
       <Route path="/" exact>
         <AllPicturesPage

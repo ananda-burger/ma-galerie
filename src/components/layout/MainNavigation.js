@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom'
+import Select from 'react-select'
 
 import classes from './MainNavigation.module.css'
 
 const MainNavigation = (props) => {
-  const selectHandler = (event) => {
-    props.setSelectedFilter(event.target.value)
+  const selectHandler = (option) => {
+    props.setSelectedFilter(option.value)
+  }
+
+  const boardHandler = (options) => {
+    props.setSelectedBoardFilter(options)
   }
 
   return (
@@ -12,11 +17,29 @@ const MainNavigation = (props) => {
       <div className={classes.title}>
         <Link to="/">Ma Galerie</Link>
       </div>
-      <select defaultValue={props.selectedFilter} onChange={selectHandler}>
-        <option value="all">All</option>
-        <option value="liked">Liked</option>
-        <option value="not-liked">Not liked</option>
-      </select>
+      <Select
+        className={classes.select}
+        placeholder="Filter by..."
+        isSearchable={false}
+        defaultValue={props.selectedFilter}
+        options={[
+          { value: 'all', label: 'All' },
+          { value: 'liked', label: 'Liked' },
+          { value: 'not-liked', label: 'Not liked' }
+        ]}
+        onChange={selectHandler}
+      />
+      <Select
+        className={classes.multiselect}
+        placeholder="Boards"
+        isMulti
+        options={[
+          { value: 'pink', label: 'Pink' },
+          { value: 'blue', label: 'Blue' },
+          { value: 'black', label: 'Black' }
+        ]}
+        onChange={boardHandler}
+      />
       {/* <Link to="/new-picture" className={classes.nav}> */}
       {/*   Add */}
       {/* </Link> */}

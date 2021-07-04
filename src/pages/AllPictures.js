@@ -4,7 +4,10 @@ import classes from './AllPictures.module.css'
 import * as imageDomain from '../domain/image.js'
 
 const AllPicturesPage = (props) => {
-  const filteredImages = imageDomain.filterImages(
+  // const filteredImages = imageDomain.filterImages(
+  //   props.images,
+  //   props.selectedFilter
+  const filteredBoardImages = imageDomain.filterBoardImages(
     props.images,
     props.selectedFilter
   )
@@ -15,7 +18,7 @@ const AllPicturesPage = (props) => {
 
   return (
     <ul className={classes.list}>
-      {filteredImages.map((img) => {
+      {filteredBoardImages.map((img) => {
         return (
           <li key={img.id} className={classes.item}>
             <img src={img.image} alt={img.title} className={classes.image} />

@@ -14,6 +14,16 @@ const filterImages = (images, selectedFilter) => {
   return filteredImages
 }
 
+const filterBoardImages = (images, selectedFilter) => {
+  // let filteredImages = images
+  //   if (selectedFilter !== 'all') {
+  //     filteredImages = filteredImages.filter((image) => {
+  //       image.boards.includes(selectedFilter)
+  //     })
+  //   }
+  //   return filteredImages
+}
+
 const toggleLike = (images, id) => {
   const updatedImages = [...images]
   const index = updatedImages.findIndex((image) => image.id === id)
@@ -21,4 +31,4 @@ const toggleLike = (images, id) => {
   return updatedImages
 }
 
-export { filterImages, toggleLike }
+export { filterImages, filterBoardImages, toggleLike }
