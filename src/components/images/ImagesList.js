@@ -1,28 +1,38 @@
-import { useState } from 'react'
-
 import FullHeart from '../icons/FullHeart.js'
 import HollowHeart from '../icons/HollowHeart.js'
 import classes from './ImagesList.module.css'
 
 const ImagesList = (props) => {
-  const [renderImages, setRenderImages] = useState(props.images)
+  let filteredImages = props.images
+  if (props.selectedFilter !== 'all') {
+    filteredImages = filteredImages.filter((image) => {
+      if (props.selectedFilter === 'liked') {
+        return image.likes === true
+      } else {
+        return image.likes === false
+      }
+    })
+  }
 
-  const hasLikes = (id) => {
-    const index = renderImages.findIndex((image) => image.id === id)
-    renderImages[index].likes = !renderImages[index].likes
-    const updatedImages = [...renderImages]
+  const toggleLike = (id) => {
+    const index = props.images.findIndex((image) => image.id === id)
+    props.images[index].likes = !props.images[index].likes
+    const updatedImages = [...props.images]
 
-    setRenderImages(updatedImages)
+    props.setImages(updatedImages)
   }
 
   return (
     <ul className={classes.list}>
-      {renderImages.map((img) => {
+      {filteredImages.map((img) => {
         return (
           <li key={img.id} className={classes.item}>
             <img src={img.image} alt={img.title} className={classes.image} />
             <div className={classes.text}>{img.title}</div>
-            <button onClick={() => hasLikes(img.id)} className={classes.likes}>
+            <button
+              onClick={() => toggleLike(img.id)}
+              className={classes.likes}
+            >
               {img.likes ? (
                 <FullHeart className="icon-small" />
               ) : (
