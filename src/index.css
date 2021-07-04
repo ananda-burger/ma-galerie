@@ -46,3 +46,8 @@ table {
 html {
     font-family: 'Cinzel', serif;
 }
+
+.icon-small {
+    height:  2rem;
+    width:  2rem;
+}
