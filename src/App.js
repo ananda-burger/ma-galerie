@@ -1,10 +1,7 @@
-// import Layout from './components/layout/Layout.js'
-// import Header from './components/Header.js'
 import MainNavigation from './components/layout/MainNavigation.js'
 import { Route } from 'react-router-dom'
 import { useState } from 'react'
 
-import Intro from './components/layout/Intro.js'
 import AllPicturesPage from './pages/AllPictures.js'
 import ContactPage from './pages/Contact.js'
 import FavoritesPage from './pages/Favorites.js'
@@ -98,7 +95,6 @@ const App = () => {
 
   return (
     <div>
-      {/* <Intro /> */}
       <MainNavigation
         selectedFilter={selectedFilter}
         setSelectedFilter={setSelectedFilter}
