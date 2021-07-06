@@ -12,10 +12,27 @@ const MainNavigation = (props) => {
     props.setSelectedBoardFilter(options)
   }
 
+  const sliderHandler = (event) => {
+    props.setImagesDisplayed(parseInt(event.target.value))
+  }
+
   return (
     <header className={classes.head}>
       <div className={classes.title}>
         <Link to="/">Ma Galerie</Link>
+      </div>
+      <div>
+        <input
+          id="image-number"
+          type="range"
+          min="1"
+          max="10"
+          defaultValue="2"
+          step="1"
+          className={classes.slider}
+          onChange={sliderHandler}
+        />
+        {/* <label htmlFor="image-number">Images</label> */}
       </div>
       <Select
         className={classes.select}

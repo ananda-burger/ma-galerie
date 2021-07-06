@@ -1,27 +1,23 @@
-const filterImages = (images, selectedFilter) => {
-  let filteredImages = images
-
-  if (selectedFilter !== 'all') {
-    filteredImages = filteredImages.filter((image) => {
-      if (selectedFilter === 'liked') {
-        return image.likes === true
-      } else {
-        return image.likes === false
-      }
-    })
+const isSubset = (a, b) => {
+  for (let value of b) {
+    if (!a.includes(value)) {
+      return false
+    }
   }
-
-  return filteredImages
+  return true
 }
 
-const filterBoardImages = (images, selectedFilter) => {
-  // let filteredImages = images
-  //   if (selectedFilter !== 'all') {
-  //     filteredImages = filteredImages.filter((image) => {
-  //       image.boards.includes(selectedFilter)
-  //     })
-  //   }
-  //   return filteredImages
+const likeFilter = (selectedFilter) => (image) => {
+  if (selectedFilter === 'liked') {
+    return image.likes === true
+  } else if (selectedFilter === 'not-liked') {
+    return image.likes === false
+  }
+  return true
+}
+
+const boardFilter = (boards) => (image) => {
+  return isSubset(image.boards, boards)
 }
 
 const toggleLike = (images, id) => {
@@ -31,4 +27,4 @@ const toggleLike = (images, id) => {
   return updatedImages
 }
 
-export { filterImages, filterBoardImages, toggleLike }
+export { boardFilter, likeFilter, toggleLike }
