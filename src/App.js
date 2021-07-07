@@ -91,7 +91,7 @@ const App = () => {
   const [selectedFilter, setSelectedFilter] = useState('all')
   const [selectedBoardFilter, setSelectedBoardFilter] = useState([])
   const [images, setImages] = useState(PICTURES)
-  const [imagesDisplayed, setImagesDisplayed] = useState(2)
+  const [imagesDisplayed, setImagesDisplayed] = useState(3)
 
   return (
     <div>
