@@ -1,5 +1,6 @@
 import FullHeart from '../components/icons/FullHeart.js'
 import HollowHeart from '../components/icons/HollowHeart.js'
+import Expand from '../components/icons/Expand.js'
 import classes from './AllPictures.module.css'
 import * as imageDomain from '../domain/image.js'
 
@@ -14,31 +15,30 @@ const AllPicturesPage = (props) => {
     props.setImages(imageDomain.toggleLike(props.images, id))
   }
 
-  const createColumns = (number) => {
-    return '1fr '.repeat(number)
-  }
-
-  const gridStyle = {
-    gridTemplateColumns: createColumns(props.imagesDisplayed)
-  }
-
   return (
-    <ul className={classes.list} style={gridStyle}>
+    <ul className={classes.cols}>
       {filteredImages.map((img) => {
         return (
           <li key={img.id} className={classes.item}>
-            <img src={img.image} alt={img.title} className={classes.image} />
-            <div className={classes.text}>{img.title}</div>
-            <button
-              onClick={() => toggleLike(img.id)}
-              className={classes.likes}
-            >
-              {img.likes ? (
-                <FullHeart className="icon-small" />
-              ) : (
-                <HollowHeart className="icon-small" />
-              )}
-            </button>
+            <div className={classes.expand}>
+              <Expand />
+            </div>
+            <div className={classes.imghoverzoom}>
+              <img src={img.image} alt={img.title} className={classes.image} />
+            </div>
+            <div className={classes.info}>
+              <div className={classes.imgtitle}>{img.title}</div>
+              <button
+                onClick={() => toggleLike(img.id)}
+                className={classes.likes}
+              >
+                {img.likes ? (
+                  <FullHeart className="icon-small" />
+                ) : (
+                  <HollowHeart className="icon-small" />
+                )}
+              </button>
+            </div>
           </li>
         )
       })}

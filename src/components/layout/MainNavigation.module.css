@@ -1,66 +1,66 @@
 a {
-    color:  black;
-    /* color: #ce58b1; */
-    text-decoration:  none;
+  color: white;
+  /* color: #ce58b1; */
+  text-decoration: none;
 }
 
 .head {
-    background-color:  white;
-    display:  flex;
-    align-items:  center;
-    justify-content:  space-between;
-    position:  sticky;
-    top:  0;
-    width:  100%;
-    height:  3rem;
-    z-index:  9999;
+  background: linear-gradient(180deg, #000, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  z-index: 9999;
 }
 
 .title {
-    color:  black;
-    font-size:  25.6px;
-    font-size:  1.6rem;
-    flex-grow:  1;
-    margin-left:  0.5rem;
+  color: white;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  flex-grow: 1;
+  margin-left: 0.5rem;
 }
 
 .nav {
-    font-size:  12.8px;
-    font-size:  0.8rem;
-    margin-right:  0.5rem;
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
 }
 
 .navigation {
-    display:  flex;
-    align-items:  center;
-    justify-content:  flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.navigation a, .navigation p {
-    padding:  10px;
+.navigation a,
+.navigation p {
+  padding: 10px;
 }
 
 .select {
-    min-width:  9rem;
+  min-width: 9rem;
 }
 
 .multiselect {
-    min-width: 9rem;
+  min-width: 9rem;
 }
 
 @media (min-width: 540px) {
-    .title {
-        color:  black;
-        font-size:  32px;
-        font-size:  2rem;
-        flex-grow:  1;
-        margin-left:  1rem;
-    }
+  .title {
+    color: white;
+    font-size: 32px;
+    font-size: 2rem;
+    flex-grow: 1;
+    margin-left: 1rem;
+  }
 
-    .nav {
-        font-size:  16px;
-        font-size:  1rem;
-        margin-right:  1rem;
-    }
-
+  .nav {
+    font-size: 16px;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
 }

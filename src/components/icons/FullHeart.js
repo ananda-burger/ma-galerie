@@ -5,6 +5,7 @@ const FullHeart = (props) => {
       className={props.className}
       viewBox="0 0 20 20"
       fill="currentColor"
+      color="white"
     >
       <path
         fillRule="evenodd"

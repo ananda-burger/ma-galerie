@@ -1,3 +1,5 @@
+import classes from './Contact.module.css'
+
 const ContactPage = () => {
   return (
     <div>
@@ -5,6 +7,7 @@ const ContactPage = () => {
         <img
           src="https://cdn.wallpapersafari.com/21/87/qjJXvV.jpg"
           alt="something"
+          className={classes.image}
         />
       </div>
       <div>
@@ -16,6 +19,7 @@ const ContactPage = () => {
             <img
               scr="https://image.flaticon.com/icons/png/512/174/174855.png"
               alt="Instagram icon"
+              className={classes.image}
             />
           </li>
           <li>
