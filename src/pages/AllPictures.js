@@ -1,3 +1,4 @@
+import ImageModal from '../components/modal/ImageModal.js'
 import FullHeart from '../components/icons/FullHeart.js'
 import HollowHeart from '../components/icons/HollowHeart.js'
 import Expand from '../components/icons/Expand.js'
@@ -15,34 +16,49 @@ const AllPicturesPage = (props) => {
     props.setImages(imageDomain.toggleLike(props.images, id))
   }
 
+  const expandHandler = (id) => {
+    props.setImageIsOpen(true)
+  }
+
   return (
-    <ul className={classes.cols}>
-      {filteredImages.map((img) => {
-        return (
-          <li key={img.id} className={classes.item}>
-            <div className={classes.expand}>
-              <Expand />
-            </div>
-            <div className={classes.imghoverzoom}>
-              <img src={img.image} alt={img.title} className={classes.image} />
-            </div>
-            <div className={classes.info}>
-              <div className={classes.imgtitle}>{img.title}</div>
+    <div>
+      <ul className={classes.cols}>
+        {filteredImages.map((img) => {
+          return (
+            <li key={img.id} className={classes.item}>
               <button
-                onClick={() => toggleLike(img.id)}
-                className={classes.likes}
+                className={classes.expand}
+                onClick={() => expandHandler(img.id)}
               >
-                {img.likes ? (
-                  <FullHeart className="icon-small" />
-                ) : (
-                  <HollowHeart className="icon-small" />
-                )}
+                <Expand />
               </button>
-            </div>
-          </li>
-        )
-      })}
-    </ul>
+              <div className={classes.imghoverzoom}>
+                <img
+                  src={img.image}
+                  alt={img.title}
+                  className={classes.image}
+                />
+              </div>
+              <div className={classes.info}>
+                <div className={classes.imgtitle}>{img.title}</div>
+                <button
+                  onClick={() => toggleLike(img.id)}
+                  className={classes.likes}
+                >
+                  {img.likes ? (
+                    <FullHeart className="icon-small" />
+                  ) : (
+                    <HollowHeart className="icon-small" />
+                  )}
+                </button>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+      {props.imageIsOpen && <ImageModal />}
+      {/* {props.imageIsOpen && <ImageBackdrop />} */}
+    </div>
   )
 }
 

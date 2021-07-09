@@ -99,6 +99,7 @@ const App = () => {
   const [selectedBoardFilter, setSelectedBoardFilter] = useState([])
   const [images, setImages] = useState(PICTURES)
   const [imagesDisplayed, setImagesDisplayed] = useState(3)
+  const [imageIsOpen, setImageIsOpen] = useState(false)
 
   return (
     <div>
@@ -120,6 +121,8 @@ const App = () => {
           setImages={setImages}
           imagesDisplayed={imagesDisplayed}
           setImagesDisplayed={setImagesDisplayed}
+          imageIsOpen={imageIsOpen}
+          setImageIsOpen={setImageIsOpen}
         />
       </Route>
       <Route path="/about">
