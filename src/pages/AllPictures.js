@@ -17,7 +17,7 @@ const AllPicturesPage = (props) => {
   }
 
   const expandHandler = (id) => {
-    props.setImageIsOpen(true)
+    props.setImageIsOpen(id)
   }
 
   return (
@@ -34,6 +34,7 @@ const AllPicturesPage = (props) => {
               </button>
               <div className={classes.imghoverzoom}>
                 <img
+                  onClick={() => expandHandler(img.id)}
                   src={img.image}
                   alt={img.title}
                   className={classes.image}
@@ -56,8 +57,13 @@ const AllPicturesPage = (props) => {
           )
         })}
       </ul>
-      {props.imageIsOpen && <ImageModal />}
-      {/* {props.imageIsOpen && <ImageBackdrop />} */}
+      {props.imageIsOpen && (
+        <ImageModal
+          setImageIsOpen={props.setImageIsOpen}
+          images={props.images}
+          imageId={props.imageIsOpen}
+        />
+      )}
     </div>
   )
 }

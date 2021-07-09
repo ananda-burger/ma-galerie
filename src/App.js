@@ -14,13 +14,13 @@ const PICTURES = [
     likes: false,
     boards: ['pink']
   },
-  {
-    id: 2,
-    image: 'https://i.redd.it/y69ercliqi551.png',
-    title: 'Game dude',
-    likes: false,
-    boards: ['black']
-  },
+  // {
+  //   id: 2,
+  //   image: 'https://i.redd.it/y69ercliqi551.png',
+  //   title: 'Game dude',
+  //   likes: false,
+  //   boards: ['black']
+  // },
   {
     id: 3,
     image:
@@ -45,22 +45,22 @@ const PICTURES = [
     likes: false,
     boards: ['blue']
   },
-  {
-    id: 6,
-    image:
-      'https://i.pinimg.com/originals/a4/f8/f9/a4f8f91b31d2c63a015ed34ae8c13bbd.jpg',
-    title: 'Moon and tree',
-    likes: false,
-    boards: ['black', 'blue']
-  },
-  {
-    id: 7,
-    image:
-      'https://www.showmetech.com.br/wp-content/uploads//2017/01/outrun_wallpaper__10_-2017-01-25-0516.jpg',
-    title: 'Turning torso',
-    likes: false,
-    boards: ['pink', 'black', 'blue']
-  },
+  // {
+  //   id: 6,
+  //   image:
+  //     'https://i.pinimg.com/originals/a4/f8/f9/a4f8f91b31d2c63a015ed34ae8c13bbd.jpg',
+  //   title: 'Moon and tree',
+  //   likes: false,
+  //   boards: ['black', 'blue']
+  // },
+  // {
+  //   id: 7,
+  //   image:
+  //     'https://www.showmetech.com.br/wp-content/uploads//2017/01/outrun_wallpaper__10_-2017-01-25-0516.jpg',
+  //   title: 'Turning torso',
+  //   likes: false,
+  //   boards: ['pink', 'black', 'blue']
+  // },
   {
     id: 8,
     image:
@@ -69,13 +69,13 @@ const PICTURES = [
     likes: false,
     boards: ['pink', 'blue', 'black']
   },
-  {
-    id: 9,
-    image: 'https://psxbrasil.com.br/wp-content/uploads/2020/09/TLOU-2-4K.jpg',
-    title: 'Last of us',
-    likes: false,
-    boards: ['black']
-  },
+  // {
+  //   id: 9,
+  //   image: 'https://psxbrasil.com.br/wp-content/uploads/2020/09/TLOU-2-4K.jpg',
+  //   title: 'Last of us',
+  //   likes: false,
+  //   boards: ['black']
+  // },
   {
     id: 10,
     image:
