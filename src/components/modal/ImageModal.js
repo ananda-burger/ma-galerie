@@ -18,7 +18,7 @@ const ImageModal = (props) => {
         className={classes.close}
         onClick={() => props.setImageIsOpen(false)}
       >
-        X
+        <Close className="icon-medium" />
       </button>
     </div>
   )

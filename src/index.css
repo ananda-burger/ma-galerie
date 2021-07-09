@@ -137,3 +137,9 @@ body {
   width: 1.5rem;
   cursor: pointer;
 }
+
+.icon-medium {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
