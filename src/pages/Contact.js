@@ -1,40 +1,31 @@
 import classes from './Contact.module.css'
+import LinkedIn from '../components/icons/LinkedIn.js'
+import Facebook from '../components/icons/Facebook.js'
+import Instagram from '../components/icons/Instagram.js'
 
 const ContactPage = () => {
   return (
     <div>
       <div>
-        <img
-          src="https://cdn.wallpapersafari.com/21/87/qjJXvV.jpg"
-          alt="something"
-          className={classes.image}
-        />
-      </div>
-      <div>
-        <h2>Contact My Pics</h2>
-        <p>Get in touch to know more about us!</p>
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/">Instagram</a>
-            <img
-              scr="https://image.flaticon.com/icons/png/512/174/174855.png"
-              alt="Instagram icon"
-              className={classes.image}
-            />
+        <h2 className={classes.call}>Get in touch to know more about us!</h2>
+        <ul className={classes.list}>
+          <li className={classes.item}>
+            <Instagram />
+            <a href="https://www.instagram.com/" className={classes.black}>
+              Instagram
+            </a>
           </li>
-          <li>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-            <img
-              scr="https://image.flaticon.com/icons/png/512/174/174857.png"
-              alt="LinkedIn icon"
-            />
+          <li className={classes.item}>
+            <LinkedIn />
+            <a href="https://www.linkedin.com/" className={classes.black}>
+              LinkedIn
+            </a>
           </li>
-          <li>
-            <a href="https://www.facebook.com/">Facebook</a>
-            <img
-              scr="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/600px-Facebook_icon_2013.svg.png"
-              alt="Facebook icon"
-            />
+          <li className={classes.item}>
+            <Facebook />
+            <a href="https://www.facebook.com/" className={classes.black}>
+              Facebook
+            </a>
           </li>
         </ul>
       </div>

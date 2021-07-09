@@ -1,3 +1,37 @@
-.image {
-  width: 200px;
+.black {
+  color: black;
+  margin: 0.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.call {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid;
+}
+
+@media (min-width: 420px) {
+  .list {
+    display: flex;
+  }
+
+  .item {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .call {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid;
+  }
 }
