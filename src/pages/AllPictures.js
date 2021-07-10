@@ -30,7 +30,7 @@ const AllPicturesPage = (props) => {
                 className={classes.expand}
                 onClick={() => expandHandler(img.id)}
               >
-                <Expand />
+                <Expand className="icon-medium" />
               </button>
               <div className={classes.imghoverzoom}>
                 <img

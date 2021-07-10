@@ -6,7 +6,7 @@ const Expand = (props) => {
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      color="black"
+      color="white"
     >
       <path
         strokeLinecap="round"
