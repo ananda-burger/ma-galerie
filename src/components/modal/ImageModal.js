@@ -13,7 +13,11 @@ const ImageModal = (props) => {
       onClick={() => props.setImageIsOpen(false)}
       /* onKeyUp={keyUpHandler} */
     >
-      <img src={clickedImage.image} className={classes.image} />
+      <img
+        alt={clickedImage.title}
+        src={clickedImage.image}
+        className={classes.image}
+      />
       <button
         className={classes.close}
         onClick={() => props.setImageIsOpen(false)}
