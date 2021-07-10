@@ -5,7 +5,7 @@ a {
 }
 
 .head {
-  background: linear-gradient(180deg, #000, transparent);
+  background: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,6 +17,7 @@ a {
 }
 
 .title {
+  font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 25.6px;
   font-size: 1.6rem;

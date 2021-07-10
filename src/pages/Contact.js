@@ -7,7 +7,7 @@ const ContactPage = () => {
   return (
     <div>
       <div>
-        <h2 className={classes.call}>Get in touch to know more about us!</h2>
+        <h2 className={classes.call}>Get in touch to know more about me</h2>
         <ul className={classes.list}>
           <li className={classes.item}>
             <Instagram />
