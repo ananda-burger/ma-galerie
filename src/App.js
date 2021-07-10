@@ -103,14 +103,7 @@ const App = () => {
 
   return (
     <div>
-      <MainNavigation
-        selectedFilter={selectedFilter}
-        setSelectedFilter={setSelectedFilter}
-        selectedBoardFilter={selectedBoardFilter}
-        setSelectedBoardFilter={setSelectedBoardFilter}
-        imagesDisplayed={imagesDisplayed}
-        setImagesDisplayed={setImagesDisplayed}
-      />
+      <MainNavigation />
       <Route path="/" exact>
         <AllPicturesPage
           selectedFilter={selectedFilter}

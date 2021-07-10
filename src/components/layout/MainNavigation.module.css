@@ -42,14 +42,6 @@ a {
   padding: 10px;
 }
 
-.select {
-  min-width: 9rem;
-}
-
-.multiselect {
-  min-width: 9rem;
-}
-
 @media (min-width: 540px) {
   .title {
     color: white;
