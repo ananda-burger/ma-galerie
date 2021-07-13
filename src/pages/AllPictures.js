@@ -9,24 +9,53 @@ import * as imageDomain from '../domain/image.js'
 
 const AllPicturesPage = (props) => {
   const customStyles = {
+    container: (provided, _state) => ({
+      ...provided,
+      cursor: 'pointer'
+    }),
     option: (provided, state) => ({
       ...provided,
       color: state.isSelected ? 'hotpink' : 'black'
-      // backgroundColor: state.isSelected ? 'black' : 'white'
+    }),
+    menu: (provided, _state) => ({
+      ...provided,
+      borderRadius: 'none'
+    }),
+    clearIndicator: (provided, _state) => ({
+      ...provided,
+      color: 'white'
+    }),
+    indicatorSeparator: (provided, _state) => ({
+      ...provided,
+      backgroundColor: 'white'
+    }),
+    multiValue: (provided, _state) => ({
+      ...provided,
+      backgroundColor: 'black'
+    }),
+    multiValueLabel: (provided, _state) => ({
+      ...provided,
+      color: 'white'
+    }),
+    multiValueRemove: (provided, _state) => ({
+      ...provided,
+      color: 'hotpink',
+      backgroundColor: 'black'
+    }),
+    dropdownIndicator: (provided, _state) => ({
+      ...provided,
+      color: 'white'
     }),
     control: (provided, _state) => ({
       ...provided,
+      // border: '3px solid black',
       border: 'none',
-      // none of react-select's styles are passed to <Control />
-      backgroundColor: 'black'
+      backgroundColor: 'black',
+      cursor: 'pointer'
     }),
     singleValue: (provided, _state) => ({
       ...provided,
       color: 'white'
-      // const opacity = state.isDisabled ? 0.5 : 1
-      // const transition = 'opacity 300ms'
-
-      // return { ...provided, opacity, transition }
     })
   }
 
@@ -51,7 +80,7 @@ const AllPicturesPage = (props) => {
   const boardHandler = (options) => {
     props.setSelectedBoardFilter(options)
   }
-  console.log('rendering allpictures')
+
   return (
     <div>
       <ul className={classes.cols}>
@@ -100,6 +129,30 @@ const AllPicturesPage = (props) => {
         <Select
           styles={customStyles}
           className={classes.select}
+          placeholder="Boards"
+          isMulti
+          options={[
+            { value: 'pink', label: 'Pink' },
+            { value: 'blue', label: 'Blue' },
+            { value: 'black', label: 'Black' }
+          ]}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: '10px 0 0 10px',
+            backgroundColor: 'black',
+            border: 'none',
+            colors: {
+              ...theme.colors,
+              primary25: 'hotpink',
+              primary: 'black'
+            }
+          })}
+          menuPlacement="top"
+          onChange={boardHandler}
+        />
+        <Select
+          styles={customStyles}
+          className={classes.multiselect}
           placeholder="Filter by..."
           isSearchable={false}
           defaultValue={props.selectedFilter}
@@ -110,38 +163,16 @@ const AllPicturesPage = (props) => {
           ]}
           theme={(theme) => ({
             ...theme,
-            borderRadius: '10px 0 0 10px',
+            border: 'none',
+            borderRadius: '0 10px 10px 0',
             colors: {
               ...theme.colors,
               primary25: 'hotpink',
-              primary: 'gray'
+              primary: 'black'
             }
           })}
           menuPlacement="top"
           onChange={selectHandler}
-        />
-        <Select
-          className={classes.multiselect}
-          placeholder="Boards"
-          isMulti
-          options={[
-            { value: 'pink', label: 'Pink' },
-            { value: 'blue', label: 'Blue' },
-            { value: 'black', label: 'Black' }
-          ]}
-          theme={(theme) => ({
-            ...theme,
-            borderRadius: '0 10px 10px 0',
-            backgroundColor: 'black',
-            border: 'none',
-            colors: {
-              ...theme.colors,
-              primary25: 'hotpink',
-              primary: 'gray'
-            }
-          })}
-          menuPlacement="top"
-          onChange={boardHandler}
         />
       </div>
     </div>
