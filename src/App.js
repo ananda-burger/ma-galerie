@@ -1,10 +1,11 @@
 import MainNavigation from './components/layout/MainNavigation.js'
-import { Route } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
 import AllPicturesPage from './pages/AllPictures.js'
 import ContactPage from './pages/Contact.js'
 import AboutPage from './pages/About.js'
+import ImageModal from './components/modal/ImageModal.js'
 
 const PICTURES = [
   {
@@ -98,32 +99,40 @@ const App = () => {
   const [selectedFilter, setSelectedFilter] = useState('all')
   const [selectedBoardFilter, setSelectedBoardFilter] = useState([])
   const [images, setImages] = useState(PICTURES)
-  const [imagesDisplayed, setImagesDisplayed] = useState(3)
-  const [imageIsOpen, setImageIsOpen] = useState(false)
+
+  const location = useLocation()
+  const prevLocation = location.state && location.state.prevLocation
 
   return (
     <div>
       <MainNavigation />
-      <Route path="/" exact>
-        <AllPicturesPage
-          selectedFilter={selectedFilter}
-          setSelectedFilter={setSelectedFilter}
-          selectedBoardFilter={selectedBoardFilter}
-          setSelectedBoardFilter={setSelectedBoardFilter}
-          images={images}
-          setImages={setImages}
-          imagesDisplayed={imagesDisplayed}
-          setImagesDisplayed={setImagesDisplayed}
-          imageIsOpen={imageIsOpen}
-          setImageIsOpen={setImageIsOpen}
-        />
-      </Route>
-      <Route path="/about">
-        <AboutPage />
-      </Route>
-      <Route path="/contact">
-        <ContactPage />
-      </Route>
+      <Switch location={prevLocation || location}>
+        <Route path="/" exact>
+          <AllPicturesPage
+            selectedFilter={selectedFilter}
+            setSelectedFilter={setSelectedFilter}
+            selectedBoardFilter={selectedBoardFilter}
+            setSelectedBoardFilter={setSelectedBoardFilter}
+            images={images}
+            setImages={setImages}
+          />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
+        </Route>
+        <Route path="/contact">
+          <ContactPage />
+        </Route>
+        <Route path="/images/:id">
+          <ImageModal images={images} />
+        </Route>
+      </Switch>
+
+      {prevLocation && (
+        <Route path="/images/:id">
+          <ImageModal images={images} />
+        </Route>
+      )}
     </div>
   )
 }

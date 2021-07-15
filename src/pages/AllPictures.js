@@ -1,6 +1,6 @@
 import Select from 'react-select'
+import { Link, useLocation } from 'react-router-dom'
 
-import ImageModal from '../components/modal/ImageModal.js'
 import FullHeart from '../components/icons/FullHeart.js'
 import HollowHeart from '../components/icons/HollowHeart.js'
 import Expand from '../components/icons/Expand.js'
@@ -8,6 +8,8 @@ import classes from './AllPictures.module.css'
 import * as imageDomain from '../domain/image.js'
 
 const AllPicturesPage = (props) => {
+  const location = useLocation()
+
   const customStyles = {
     container: (provided, _state) => ({
       ...provided,
@@ -69,10 +71,6 @@ const AllPicturesPage = (props) => {
     props.setImages(imageDomain.toggleLike(props.images, id))
   }
 
-  const expandHandler = (id) => {
-    props.setImageIsOpen(id)
-  }
-
   const selectHandler = (option) => {
     props.setSelectedFilter(option.value)
   }
@@ -87,20 +85,28 @@ const AllPicturesPage = (props) => {
         {filteredImages.map((img) => {
           return (
             <li key={img.id} className={classes.item}>
-              <button
+              <Link
+                to={{
+                  pathname: `/images/${img.id}`,
+                  state: { prevLocation: location }
+                }}
                 className={classes.expand}
-                onClick={() => expandHandler(img.id)}
               >
                 <Expand className="icon-medium" />
-              </button>
-              <div className={classes.imghoverzoom}>
+              </Link>
+              <Link
+                to={{
+                  pathname: `/images/${img.id}`,
+                  state: { prevLocation: location }
+                }}
+                className={classes.imghoverzoom}
+              >
                 <img
-                  onClick={() => expandHandler(img.id)}
                   src={img.image}
                   alt={img.title}
                   className={classes.image}
                 />
-              </div>
+              </Link>
               <div className={classes.info}>
                 <div className={classes.imgtitle}>{img.title}</div>
                 <button
@@ -118,13 +124,6 @@ const AllPicturesPage = (props) => {
           )
         })}
       </ul>
-      {props.imageIsOpen && (
-        <ImageModal
-          setImageIsOpen={props.setImageIsOpen}
-          images={props.images}
-          imageId={props.imageIsOpen}
-        />
-      )}
       <div className={classes.filters}>
         <Select
           styles={customStyles}
