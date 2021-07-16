@@ -101,11 +101,13 @@ const AllPicturesPage = (props) => {
                 }}
                 className={classes.imghoverzoom}
               >
-                <img
-                  src={img.image}
-                  alt={img.title}
-                  className={classes.image}
-                />
+                <div className={classes.overflow}>
+                  <img
+                    src={img.image}
+                    alt={img.title}
+                    className={classes.image}
+                  />
+                </div>
               </Link>
               <div className={classes.info}>
                 <div className={classes.imgtitle}>{img.title}</div>

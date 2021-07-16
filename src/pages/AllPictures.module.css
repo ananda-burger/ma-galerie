@@ -33,7 +33,6 @@
   transition: 0.5s;
   width: 100%;
   display: block;
-  border-radius: 10px 10px 0 0;
   transition: transform 0.5s ease;
   cursor: pointer;
 }
@@ -44,6 +43,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 90%;
+}
+
+.overflow {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }
 
 .info {
