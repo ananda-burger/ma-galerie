@@ -102,11 +102,23 @@ const AllPicturesPage = (props) => {
                 className={classes.imghoverzoom}
               >
                 <div className={classes.overflow}>
-                  <img
-                    src={img.image}
-                    alt={img.title}
-                    className={classes.image}
-                  />
+                  {img.type === 'video' ? (
+                    <video
+                      className={classes.video}
+                      height="400px"
+                      width="100%"
+                      controls
+                      muted
+                    >
+                      <source src={img.source} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img
+                      src={img.source}
+                      alt={img.title}
+                      className={classes.image}
+                    />
+                  )}
                 </div>
               </Link>
               <div className={classes.info}>
@@ -127,30 +139,30 @@ const AllPicturesPage = (props) => {
         })}
       </ul>
       <div className={classes.filters}>
-        <Select
-          styles={customStyles}
-          className={classes.select}
-          placeholder="Boards"
-          isMulti
-          options={[
-            { value: 'pink', label: 'Pink' },
-            { value: 'blue', label: 'Blue' },
-            { value: 'black', label: 'Black' }
-          ]}
-          theme={(theme) => ({
-            ...theme,
-            borderRadius: '10px 0 0 10px',
-            backgroundColor: 'black',
-            border: 'none',
-            colors: {
-              ...theme.colors,
-              primary25: 'hotpink',
-              primary: 'black'
-            }
-          })}
-          menuPlacement="top"
-          onChange={boardHandler}
-        />
+        {/* <Select */}
+        {/*   styles={customStyles} */}
+        {/*   className={classes.select} */}
+        {/*   placeholder="Boards" */}
+        {/*   isMulti */}
+        {/*   options={[ */}
+        {/*     { value: 'pink', label: 'Pink' }, */}
+        {/*     { value: 'blue', label: 'Blue' }, */}
+        {/*     { value: 'black', label: 'Black' } */}
+        {/*   ]} */}
+        {/*   theme={(theme) => ({ */}
+        {/*     ...theme, */}
+        {/*     borderRadius: '10px 0 0 10px', */}
+        {/*     backgroundColor: 'black', */}
+        {/*     border: 'none', */}
+        {/*     colors: { */}
+        {/*       ...theme.colors, */}
+        {/*       primary25: 'hotpink', */}
+        {/*       primary: 'black' */}
+        {/*     } */}
+        {/*   })} */}
+        {/*   menuPlacement="top" */}
+        {/*   onChange={boardHandler} */}
+        {/* /> */}
         <Select
           styles={customStyles}
           className={classes.multiselect}

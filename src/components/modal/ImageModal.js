@@ -11,7 +11,6 @@ const ImageModal = (props) => {
   if (!image) return null
 
   const close = (e) => {
-    console.log(e)
     e.stopPropagation()
     history.push('/')
   }
@@ -19,9 +18,15 @@ const ImageModal = (props) => {
   return (
     <div className={classes.backdrop} onClick={close}>
       <input className={classes.input} autoFocus onKeyUp={close} />
-      <img alt={image.title} src={image.image} className={classes.image} />
+      {image.type === 'video' ? (
+        <video controls muted height="100%" className={classes.image}>
+          <source src={image.source} type="video/mp4" />
+        </video>
+      ) : (
+        <img alt={image.title} src={image.source} className={classes.image} />
+      )}
       <button className={classes.close} onClick={close}>
-        <Close className="icon-medium" />
+        <Close className={classes.x} />
       </button>
     </div>
   )
