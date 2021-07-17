@@ -4,11 +4,11 @@ const AboutPage = () => {
   return (
     <div className={classes.flex}>
       <div className={classes.info}>
-        <p className={classes.text}>Hello!</p>
+        <p className={classes.title}>A little bit about me</p>
         <p className={classes.text}>
-          My name is Ananda Burger and I am a software developer who loves to
-          draw! I make traditional art as well as digital art and focus on
-          lanscape and figure drawing. Since young I have loved animes and
+          My name is <b>Ananda Burger</b> and I am a software developer who
+          loves to draw! I make traditional art as well as digital art and focus
+          on lanscape and figure drawing. Since young I have loved animes and
           japanese art, it definetly has modelled my art style.
         </p>
         <p className={classes.text}>
