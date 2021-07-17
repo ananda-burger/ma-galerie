@@ -1,4 +1,3 @@
-import Select from 'react-select'
 import { Link, useLocation } from 'react-router-dom'
 
 import FullHeart from '../components/icons/FullHeart.js'
@@ -10,57 +9,6 @@ import * as imageDomain from '../domain/image.js'
 const AllPicturesPage = (props) => {
   const location = useLocation()
 
-  const customStyles = {
-    container: (provided, _state) => ({
-      ...provided,
-      cursor: 'pointer'
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      color: state.isSelected ? 'hotpink' : 'black'
-    }),
-    menu: (provided, _state) => ({
-      ...provided,
-      borderRadius: 'none'
-    }),
-    clearIndicator: (provided, _state) => ({
-      ...provided,
-      color: 'white'
-    }),
-    indicatorSeparator: (provided, _state) => ({
-      ...provided,
-      backgroundColor: 'white'
-    }),
-    multiValue: (provided, _state) => ({
-      ...provided,
-      backgroundColor: 'black'
-    }),
-    multiValueLabel: (provided, _state) => ({
-      ...provided,
-      color: 'white'
-    }),
-    multiValueRemove: (provided, _state) => ({
-      ...provided,
-      color: 'hotpink',
-      backgroundColor: 'black'
-    }),
-    dropdownIndicator: (provided, _state) => ({
-      ...provided,
-      color: 'white'
-    }),
-    control: (provided, _state) => ({
-      ...provided,
-      // border: '3px solid black',
-      border: 'none',
-      backgroundColor: 'black',
-      cursor: 'pointer'
-    }),
-    singleValue: (provided, _state) => ({
-      ...provided,
-      color: 'white'
-    })
-  }
-
   const filteredImages = props.images
     .filter(imageDomain.likeFilter(props.selectedFilter))
     .filter(
@@ -69,14 +17,6 @@ const AllPicturesPage = (props) => {
 
   const toggleLike = (id) => {
     props.setImages(imageDomain.toggleLike(props.images, id))
-  }
-
-  const selectHandler = (option) => {
-    props.setSelectedFilter(option.value)
-  }
-
-  const boardHandler = (options) => {
-    props.setSelectedBoardFilter(options)
   }
 
   return (
@@ -138,55 +78,11 @@ const AllPicturesPage = (props) => {
           )
         })}
       </ul>
-      <div className={classes.filters}>
-        {/* <Select */}
-        {/*   styles={customStyles} */}
-        {/*   className={classes.select} */}
-        {/*   placeholder="Boards" */}
-        {/*   isMulti */}
-        {/*   options={[ */}
-        {/*     { value: 'pink', label: 'Pink' }, */}
-        {/*     { value: 'blue', label: 'Blue' }, */}
-        {/*     { value: 'black', label: 'Black' } */}
-        {/*   ]} */}
-        {/*   theme={(theme) => ({ */}
-        {/*     ...theme, */}
-        {/*     borderRadius: '10px 0 0 10px', */}
-        {/*     backgroundColor: 'black', */}
-        {/*     border: 'none', */}
-        {/*     colors: { */}
-        {/*       ...theme.colors, */}
-        {/*       primary25: 'hotpink', */}
-        {/*       primary: 'black' */}
-        {/*     } */}
-        {/*   })} */}
-        {/*   menuPlacement="top" */}
-        {/*   onChange={boardHandler} */}
-        {/* /> */}
-        <Select
-          styles={customStyles}
-          className={classes.multiselect}
-          placeholder="Filter by..."
-          isSearchable={false}
-          defaultValue={props.selectedFilter}
-          options={[
-            { value: 'all', label: 'All' },
-            { value: 'liked', label: 'Liked' },
-            { value: 'not-liked', label: 'Not liked' }
-          ]}
-          theme={(theme) => ({
-            ...theme,
-            border: 'none',
-            borderRadius: '0 10px 10px 0',
-            colors: {
-              ...theme.colors,
-              primary25: 'hotpink',
-              primary: 'black'
-            }
-          })}
-          menuPlacement="top"
-          onChange={selectHandler}
-        />
+      <div className={classes.filterbar}>
+        <div className={classes.filter}>Original</div>
+        <div className={classes.filter}>FanArt</div>
+        <div className={classes.filter}>Image</div>
+        <div className={classes.filter}>Video</div>
       </div>
     </div>
   )
