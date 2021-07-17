@@ -15,19 +15,19 @@ const ContactPage = () => {
         </li>
         <li className={classes.item}>
           <Instagram />
-          <a href="https://www.instagram.com/" className={classes.text}>
+          <a href="https://www.instagram.com/" className={classes.link}>
             Instagram
           </a>
         </li>
         <li className={classes.item}>
           <LinkedIn />
-          <a href="https://www.linkedin.com/" className={classes.text}>
+          <a href="https://www.linkedin.com/" className={classes.link}>
             LinkedIn
           </a>
         </li>
         <li className={classes.item}>
           <Facebook />
-          <a href="https://www.facebook.com/" className={classes.text}>
+          <a href="https://www.facebook.com/" className={classes.link}>
             Facebook
           </a>
         </li>
