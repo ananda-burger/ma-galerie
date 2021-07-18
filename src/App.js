@@ -6,6 +6,7 @@ import AllPicturesPage from './pages/AllPictures.js'
 import ContactPage from './pages/Contact.js'
 import AboutPage from './pages/About.js'
 import ImageModal from './components/modal/ImageModal.js'
+import NotFound from './pages/NotFound.js'
 import { Tags } from './domain/constants.js'
 
 const PICTURES = [
@@ -132,6 +133,9 @@ const App = () => {
         </Route>
         <Route path="/images/:id">
           <ImageModal images={images} />
+        </Route>
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
 

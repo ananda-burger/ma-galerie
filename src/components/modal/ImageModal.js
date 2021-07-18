@@ -1,5 +1,6 @@
 import classes from './ImageModal.module.css'
 import Close from '../icons/Close.js'
+import NotFound from '../../pages/NotFound.js'
 
 import { useHistory, useParams } from 'react-router-dom'
 
@@ -8,7 +9,7 @@ const ImageModal = (props) => {
   const id = parseInt(useParams().id, 10)
   const image = props.images.find((img) => img.id === id)
 
-  if (!image) return null
+  if (!image) return <NotFound />
 
   const close = (e) => {
     e.stopPropagation()
