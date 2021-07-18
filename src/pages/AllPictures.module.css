@@ -51,6 +51,7 @@
 
 .imgtitle {
   flex-grow: 1;
+  line-height: 1.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -91,7 +92,7 @@
   padding: 0.75rem;
   position: fixed;
   left: 50%;
-  top: 90%;
+  top: 93%;
   transform: translateX(-50%) translateY(-50%);
   font-size: 0.9rem;
   color: white;
@@ -99,6 +100,15 @@
   border: 1px solid white;
   border-radius: 50px;
   z-index: 2;
+  transition: 0.2s linear;
+}
+
+.selectedfilter {
+  color: #ff69b4;
+  font-weight: bold;
+  cursor: pointer;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .filter {
@@ -133,8 +143,7 @@
   }
 
   .filterbar:hover {
-    border: 2px solid hiteff69b4;
-    padding: 1rem;
+    border: 1px solid #ff69b4;
     background-color: black;
   }
 

@@ -5,18 +5,32 @@ import HollowHeart from '../components/icons/HollowHeart.js'
 import Expand from '../components/icons/Expand.js'
 import classes from './AllPictures.module.css'
 import * as imageDomain from '../domain/image.js'
+import { Tags } from '../domain/constants.js'
 
 const AllPicturesPage = (props) => {
   const location = useLocation()
 
-  const filteredImages = props.images
-    .filter(imageDomain.likeFilter(props.selectedFilter))
-    .filter(
-      imageDomain.boardFilter(props.selectedBoardFilter.map((b) => b.value))
+  let filteredImages = props.images
+  if (props.selectedTag) {
+    filteredImages = props.images.filter(
+      imageDomain.tagFilter(props.selectedTag)
     )
+  }
 
   const toggleLike = (id) => {
     props.setImages(imageDomain.toggleLike(props.images, id))
+  }
+
+  const tagHandler = (tag) => (_event) => {
+    if (props.selectedTag === tag) {
+      props.setSelectedTag(undefined)
+    } else {
+      props.setSelectedTag(tag)
+    }
+  }
+
+  const tagClass = (tag) => {
+    return props.selectedTag === tag ? classes.selectedfilter : classes.filter
   }
 
   return (
@@ -79,10 +93,21 @@ const AllPicturesPage = (props) => {
         })}
       </ul>
       <div className={classes.filterbar}>
-        <div className={classes.filter}>Original</div>
-        <div className={classes.filter}>FanArt</div>
-        <div className={classes.filter}>Image</div>
-        <div className={classes.filter}>Video</div>
+        <div
+          className={tagClass(Tags.Original)}
+          onClick={tagHandler(Tags.Original)}
+        >
+          Original
+        </div>
+        <div
+          className={tagClass(Tags.FanArt)}
+          onClick={tagHandler(Tags.FanArt)}
+        >
+          FanArt
+        </div>
+        <div className={tagClass(Tags.Manga)} onClick={tagHandler(Tags.Manga)}>
+          Manga
+        </div>
       </div>
     </div>
   )

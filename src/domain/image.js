@@ -1,12 +1,3 @@
-const isSubset = (a, b) => {
-  for (let value of b) {
-    if (!a.includes(value)) {
-      return false
-    }
-  }
-  return true
-}
-
 const likeFilter = (selectedFilter) => (image) => {
   if (selectedFilter === 'liked') {
     return image.likes === true
@@ -16,8 +7,8 @@ const likeFilter = (selectedFilter) => (image) => {
   return true
 }
 
-const boardFilter = (boards) => (image) => {
-  return isSubset(image.boards, boards)
+const tagFilter = (tag) => (image) => {
+  return image.tags.includes(tag)
 }
 
 const toggleLike = (images, id) => {
@@ -27,4 +18,4 @@ const toggleLike = (images, id) => {
   return updatedImages
 }
 
-export { boardFilter, likeFilter, toggleLike }
+export { tagFilter, likeFilter, toggleLike }
