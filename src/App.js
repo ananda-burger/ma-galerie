@@ -108,7 +108,7 @@ const PICTURES = [
 
 const App = () => {
   const [selectedTag, setSelectedTag] = useState()
-  const [images, setImages] = useState(PICTURES)
+  const [images, setImages] = useState(null)
 
   const location = useLocation()
   const prevLocation = location.state && location.state.prevLocation
@@ -123,6 +123,7 @@ const App = () => {
             setSelectedTag={setSelectedTag}
             images={images}
             setImages={setImages}
+            fetchedImages={PICTURES}
           />
         </Route>
         <Route path="/about">
