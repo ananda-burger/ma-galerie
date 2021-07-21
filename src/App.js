@@ -108,7 +108,7 @@ const PICTURES = [
 
 const App = () => {
   const [selectedTag, setSelectedTag] = useState()
-  const [images, setImages] = useState(null)
+  const [images, setImages] = useState(PICTURES)
 
   const location = useLocation()
   const prevLocation = location.state && location.state.prevLocation

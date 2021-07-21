@@ -18,12 +18,6 @@ const AllPicturesPage = (props) => {
     )
   }
 
-  const fakeFetchImages = () => {
-    props.setImages(props.fetchedImages)
-  }
-
-  setTimeout(fakeFetchImages, 1000)
-
   const toggleLike = (id) => {
     props.setImages(imageDomain.toggleLike(props.images, id))
   }
@@ -42,14 +36,14 @@ const AllPicturesPage = (props) => {
 
   return (
     <div>
-      {!props.images && (
+      {props.images.length === 0 && (
         <ul className={classes.cols}>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => {
             return <SkeletonImage key={n} />
           })}
         </ul>
       )}
-      {props.images && (
+      {props.images.length > 0 && (
         <ul className={classes.cols}>
           {filteredImages.map((img) => {
             return (
