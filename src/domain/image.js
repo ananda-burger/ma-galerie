@@ -10,7 +10,7 @@ const toggleLike = (images, id) => {
 
   updatedImages[index] = {
     ...updatedImages[index],
-    likes: !updatedImages[index].likes
+    isLiked: !updatedImages[index].isLiked
   }
   return updatedImages
 }

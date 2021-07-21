@@ -16,19 +16,19 @@ describe('.tagFilter', () => {
 
 describe('.toggleLike', () => {
   const images = [
-    { id: 1, likes: true },
-    { id: 2, likes: false }
+    { id: 1, isLiked: true },
+    { id: 2, isLiked: false }
   ]
 
   it('toggles the image liked flag', () => {
     expect(toggleLike(images, 1)).toEqual([
-      { id: 1, likes: false },
-      { id: 2, likes: false }
+      { id: 1, isLiked: false },
+      { id: 2, isLiked: false }
     ])
 
     expect(toggleLike(images, 2)).toEqual([
-      { id: 1, likes: true },
-      { id: 2, likes: true }
+      { id: 1, isLiked: true },
+      { id: 2, isLiked: true }
     ])
   })
 

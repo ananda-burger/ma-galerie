@@ -14,7 +14,7 @@ const PICTURES = [
     id: 1,
     source: 'https://live.staticflickr.com/65535/51315444616_dcd1002c18_c.jpg',
     title: 'We meet again',
-    likes: false,
+    isLiked: false,
     tags: [Tags.Original],
     type: 'image'
   },
@@ -22,14 +22,14 @@ const PICTURES = [
   //   id: 2,
   //   image: 'https://i.redd.it/y69ercliqi551.png',
   //   title: 'Game dude',
-  //   likes: false,
+  //   isLiked: false,
   // tags: [Tags.Original]
   // },
   {
     id: 3,
     source: 'https://live.staticflickr.com/65535/51316191649_a842dd5848_k.jpg',
     title: 'An odd encounter',
-    likes: false,
+    isLiked: false,
     tags: [Tags.Original],
     type: 'image'
   },
@@ -38,7 +38,7 @@ const PICTURES = [
     source:
       'https://abduzeedo.com/sites/default/files/styles/square_1x1/public/originals/abdz_infrared_arashiyama_mockup_0.jpg?itok=D_-Tf7rE',
     title: 'Lovely pink trees',
-    likes: false,
+    isLiked: false,
     tags: [Tags.FanArt],
     type: 'image'
   },
@@ -47,7 +47,7 @@ const PICTURES = [
     source:
       'https://9to5mac.com/wp-content/uploads/sites/6/2020/10/1751.Desert_Peak_Day-375w-812h@3xiphone.png?resize=2048,2048',
     title: 'Nice calm mountain Manga',
-    likes: false,
+    isLiked: false,
     tags: [Tags.Original, Tags.Manga],
     type: 'image'
   },
@@ -56,7 +56,7 @@ const PICTURES = [
   //   source:
   //     'https://i.pinimg.com/originals/a4/f8/f9/a4f8f91b31d2c63a015ed34ae8c13bbd.jpg',
   //   title: 'Moon and tree',
-  //   likes: false,
+  //   isLiked: false,
   // tags: [Tags.Original],
   // type: 'image'
   // },
@@ -65,7 +65,7 @@ const PICTURES = [
   //   source:
   //     'https://www.showmetech.com.br/wp-content/uploads//2017/01/outrun_wallpaper__10_-2017-01-25-0516.jpg',
   //   title: 'Turning torso',
-  //   likes: false,
+  //   isLiked: false,
   // tags: [Tags.Original],
   // type: 'image'
   // },
@@ -74,7 +74,7 @@ const PICTURES = [
     source:
       'https://9to5mac.com/wp-content/uploads/sites/6/2020/10/1791.Lake_The_Cliff_Day-375w-812h@3xiphone.png',
     title: 'A ride on the mountain',
-    likes: false,
+    isLiked: false,
     tags: [Tags.Original]
   },
   {
@@ -82,7 +82,7 @@ const PICTURES = [
     source:
       'https://live.staticflickr.com/video/51314819872/9b95baee92/1080p.mp4?s=eyJpIjo1MTMxNDgxOTg3MiwiZSI6MTYyNjQ4MDYzMywicyI6IjkyYWRiZGJiOGY3ZDJlNzJjNDI0NmU2MmFiNTVmZmVhZWFjNTZiNjgiLCJ2IjoxfQ',
     title: 'Chun-li: gesture drawing',
-    likes: false,
+    isLiked: false,
     tags: [Tags.FanArt],
     type: 'video'
   },
@@ -91,7 +91,7 @@ const PICTURES = [
     source:
       'https://9to5mac.com/wp-content/uploads/sites/6/2020/10/1811.Lake_The_Desert_Day-375w-812h@3xiphone.png',
     title: 'Nice desert day',
-    likes: false,
+    isLiked: false,
     tags: [Tags.Original],
     type: 'image'
   },
@@ -100,7 +100,7 @@ const PICTURES = [
     source:
       'https://9to5mac.com/wp-content/uploads/sites/6/2020/10/1821.Lake_The_Beach_Day-375w-812h@3xiphone.png',
     title: 'Lost on shore',
-    likes: false,
+    isLiked: false,
     tags: [Tags.FanArt],
     type: 'image'
   }

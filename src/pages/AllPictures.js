@@ -90,7 +90,7 @@ const AllPicturesPage = (props) => {
                     onClick={() => toggleLike(img.id)}
                     className={classes.likes}
                   >
-                    {img.likes ? (
+                    {img.isLiked ? (
                       <FullHeart className="icon-small" />
                     ) : (
                       <HollowHeart className="icon-small" />
