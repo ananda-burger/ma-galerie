@@ -5,7 +5,10 @@ const tagFilter = (tag) => (image) => {
 const toggleLike = (images, id) => {
   const updatedImages = [...images]
   const index = updatedImages.findIndex((image) => image.id === id)
-  updatedImages[index].likes = !updatedImages[index].likes
+  updatedImages[index] = {
+    ...updatedImages[index],
+    likes: !updatedImages[index].likes
+  }
   return updatedImages
 }
 
