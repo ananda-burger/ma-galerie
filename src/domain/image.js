@@ -1,12 +1,3 @@
-const likeFilter = (selectedFilter) => (image) => {
-  if (selectedFilter === 'liked') {
-    return image.likes === true
-  } else if (selectedFilter === 'not-liked') {
-    return image.likes === false
-  }
-  return true
-}
-
 const tagFilter = (tag) => (image) => {
   return image.tags.includes(tag)
 }
@@ -18,4 +9,4 @@ const toggleLike = (images, id) => {
   return updatedImages
 }
 
-export { tagFilter, likeFilter, toggleLike }
+export { tagFilter, toggleLike }
