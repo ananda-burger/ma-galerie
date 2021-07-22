@@ -4,10 +4,10 @@ import NotFound from '../pages/NotFound.js'
 
 import { useHistory, useParams } from 'react-router-dom'
 
-const ImageModal = (props) => {
+const ImageModal = ({ images }) => {
   const history = useHistory()
   const id = parseInt(useParams().id, 10)
-  const image = props.images.find((img) => img.id === id)
+  const image = images.find((img) => img.id === id)
 
   if (!image) return <NotFound />
 

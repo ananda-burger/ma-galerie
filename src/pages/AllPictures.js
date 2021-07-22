@@ -8,26 +8,29 @@ import * as imageDomain from '../domain/image.js'
 
 import classes from './AllPictures.module.css'
 
-const AllPicturesPage = (props) => {
+const AllPicturesPage = ({
+  selectedTag,
+  setSelectedTag,
+  images,
+  setImages
+}) => {
   const location = useLocation()
 
-  let filteredImages = props.images
-  if (props.selectedTag) {
-    filteredImages = props.images.filter(
-      imageDomain.tagFilter(props.selectedTag)
-    )
+  let filteredImages = images
+  if (selectedTag) {
+    filteredImages = images.filter(imageDomain.tagFilter(selectedTag))
   }
 
   return (
     <div>
-      {props.images.length === 0 && (
+      {images.length === 0 && (
         <ul className={classes.cols}>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => {
             return <SkeletonImage key={n} />
           })}
         </ul>
       )}
-      {props.images.length > 0 && (
+      {images.length > 0 && (
         <ul className={classes.cols}>
           {filteredImages.map((img) => {
             return (
@@ -70,21 +73,14 @@ const AllPicturesPage = (props) => {
                 </Link>
                 <div className={classes.info}>
                   <div className={classes.imageTitle}>{img.title}</div>
-                  <LikeButton
-                    setImages={props.setImages}
-                    images={props.images}
-                    img={img}
-                  />
+                  <LikeButton setImages={setImages} images={images} img={img} />
                 </div>
               </li>
             )
           })}
         </ul>
       )}
-      <FilterBar
-        selectedTag={props.selectedTag}
-        setSelectedTag={props.setSelectedTag}
-      />
+      <FilterBar selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
     </div>
   )
 }

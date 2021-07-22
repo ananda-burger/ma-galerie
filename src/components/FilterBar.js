@@ -1,16 +1,16 @@
 import { Tags } from '../domain/constants.js'
 import classes from './FilterBar.module.css'
 
-const FilterBar = (props) => {
+const FilterBar = ({ selectedTag, setSelectedTag }) => {
   const tagClass = (tag) => {
-    return props.selectedTag === tag ? classes.selectedFilter : classes.filter
+    return selectedTag === tag ? classes.selectedFilter : classes.filter
   }
 
   const tagHandler = (tag) => (_event) => {
-    if (props.selectedTag === tag) {
-      props.setSelectedTag(undefined)
+    if (selectedTag === tag) {
+      setSelectedTag(undefined)
     } else {
-      props.setSelectedTag(tag)
+      setSelectedTag(tag)
     }
   }
 

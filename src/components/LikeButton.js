@@ -4,14 +4,14 @@ import * as imageDomain from '../domain/image.js'
 
 import classes from './LikeButton.module.css'
 
-const LikeButton = (props) => {
+const LikeButton = ({ images, setImages, img }) => {
   const toggleLike = (id) => {
-    props.setImages(imageDomain.toggleLike(props.images, id))
+    setImages(imageDomain.toggleLike(images, id))
   }
 
   return (
-    <button onClick={() => toggleLike(props.img.id)} className={classes.likes}>
-      {props.img.isLiked ? (
+    <button onClick={() => toggleLike(img.id)} className={classes.likes}>
+      {img.isLiked ? (
         <FullHeart className="icon-small" />
       ) : (
         <HollowHeart className="icon-small" />
