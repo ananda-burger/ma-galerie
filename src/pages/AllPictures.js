@@ -23,14 +23,14 @@ const AllPicturesPage = ({
 
   return (
     <div>
-      {images.length === 0 && (
+      {filteredImages.length === 0 && (
         <ul className={classes.cols}>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => {
             return <SkeletonImage key={n} />
           })}
         </ul>
       )}
-      {images.length > 0 && (
+      {filteredImages.length > 0 && (
         <ul className={classes.cols}>
           {filteredImages.map((img) => {
             return (
