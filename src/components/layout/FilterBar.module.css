@@ -1,0 +1,40 @@
+.filterbar {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  position: fixed;
+  left: 50%;
+  top: 93%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 0.9rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid white;
+  border-radius: 50px;
+  z-index: 2;
+  transition: 0.2s linear;
+}
+
+.selectedfilter {
+  color: #ff69b4;
+  font-weight: bold;
+  cursor: pointer;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.filter {
+  cursor: pointer;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  transition: 0.2s ease;
+}
+
+.filterbar:hover {
+  border: 1px solid #ff69b4;
+  background-color: black;
+}
+
+.filter:hover {
+  color: #ff69b4;
+}

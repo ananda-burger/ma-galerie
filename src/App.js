@@ -123,7 +123,6 @@ const App = () => {
             setSelectedTag={setSelectedTag}
             images={images}
             setImages={setImages}
-            fetchedImages={PICTURES}
           />
         </Route>
         <Route path="/about">

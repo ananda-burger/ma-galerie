@@ -3,10 +3,11 @@ import { Link, useLocation } from 'react-router-dom'
 import FullHeart from '../components/icons/FullHeart.js'
 import HollowHeart from '../components/icons/HollowHeart.js'
 import Expand from '../components/icons/Expand.js'
-import classes from './AllPictures.module.css'
-import * as imageDomain from '../domain/image.js'
-import { Tags } from '../domain/constants.js'
 import SkeletonImage from '../components/skeletons/SkeletonImage.js'
+import FilterBar from '../components/layout/FilterBar.js'
+import * as imageDomain from '../domain/image.js'
+
+import classes from './AllPictures.module.css'
 
 const AllPicturesPage = (props) => {
   const location = useLocation()
@@ -20,18 +21,6 @@ const AllPicturesPage = (props) => {
 
   const toggleLike = (id) => {
     props.setImages(imageDomain.toggleLike(props.images, id))
-  }
-
-  const tagHandler = (tag) => (_event) => {
-    if (props.selectedTag === tag) {
-      props.setSelectedTag(undefined)
-    } else {
-      props.setSelectedTag(tag)
-    }
-  }
-
-  const tagClass = (tag) => {
-    return props.selectedTag === tag ? classes.selectedfilter : classes.filter
   }
 
   return (
@@ -102,23 +91,10 @@ const AllPicturesPage = (props) => {
           })}
         </ul>
       )}
-      <div className={classes.filterbar}>
-        <div
-          className={tagClass(Tags.Original)}
-          onClick={tagHandler(Tags.Original)}
-        >
-          Original
-        </div>
-        <div
-          className={tagClass(Tags.FanArt)}
-          onClick={tagHandler(Tags.FanArt)}
-        >
-          FanArt
-        </div>
-        <div className={tagClass(Tags.Manga)} onClick={tagHandler(Tags.Manga)}>
-          Manga
-        </div>
-      </div>
+      <FilterBar
+        selectedTag={props.selectedTag}
+        setSelectedTag={props.setSelectedTag}
+      />
     </div>
   )
 }
