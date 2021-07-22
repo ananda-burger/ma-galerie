@@ -1,4 +1,4 @@
-import { tagFilter, toggleLike } from '../../src/domain/image.js'
+import { tagFilter, toggleLike, fetchImages } from '../../src/domain/image.js'
 
 describe('.tagFilter', () => {
   const image = { tags: ['pudim', 'banana'] }
@@ -38,5 +38,21 @@ describe('.toggleLike', () => {
 
   it('throws an error if image id is not found', () => {
     expect(() => toggleLike(images, 0)).toThrow()
+  })
+})
+
+describe('.fetchImages', () => {
+  it('asynchronously fetches images', async () => {
+    const images = await fetchImages()
+    expect(images.length).toBeGreaterThan(1)
+    expect(images[0]).toEqual({
+      id: 1,
+      source:
+        'https://live.staticflickr.com/65535/51315444616_dcd1002c18_c.jpg',
+      title: 'We meet again',
+      isLiked: false,
+      tags: ['original'],
+      type: 'image'
+    })
   })
 })
