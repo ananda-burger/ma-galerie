@@ -51,7 +51,7 @@ const AllPicturesPage = (props) => {
                     pathname: `/images/${img.id}`,
                     state: { prevLocation: location }
                   }}
-                  className={classes.imghoverzoom}
+                  className={classes.imageHoverZoom}
                 >
                   <div className={classes.overflow}>
                     {img.type === 'video' ? (
@@ -74,7 +74,7 @@ const AllPicturesPage = (props) => {
                   </div>
                 </Link>
                 <div className={classes.info}>
-                  <div className={classes.imgtitle}>{img.title}</div>
+                  <div className={classes.imageTitle}>{img.title}</div>
                   <button
                     onClick={() => toggleLike(img.id)}
                     className={classes.likes}

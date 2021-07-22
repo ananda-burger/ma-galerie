@@ -3,7 +3,7 @@ import classes from './FilterBar.module.css'
 
 const FilterBar = (props) => {
   const tagClass = (tag) => {
-    return props.selectedTag === tag ? classes.selectedfilter : classes.filter
+    return props.selectedTag === tag ? classes.selectedFilter : classes.filter
   }
 
   const tagHandler = (tag) => (_event) => {
@@ -15,7 +15,7 @@ const FilterBar = (props) => {
   }
 
   return (
-    <div className={classes.filterbar}>
+    <div className={classes.filterBar}>
       <div
         className={tagClass(Tags.Original)}
         onClick={tagHandler(Tags.Original)}

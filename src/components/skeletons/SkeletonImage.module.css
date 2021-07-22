@@ -1,4 +1,4 @@
-.skeletonwrapper {
+.skeletonWrapper {
   background-color: #f2f2f2;
   height: 437px;
   border-radius: 10px;
@@ -9,12 +9,12 @@
   overflow: hidden;
 }
 
-.skeletonimage {
+.skeletonImage {
   height: 400px;
   display: flex;
 }
 
-.skeletontitle {
+.skeletonTitle {
   background-color: #f2f2f2;
   height: 37px;
   display: flex;
@@ -22,7 +22,7 @@
   justify-content: space-between;
 }
 
-.skeletontext {
+.skeletonText {
   background-color: #ddd;
   flex-grow: 1;
   height: 1rem;
@@ -31,7 +31,7 @@
   border-radius: 5px;
 }
 
-.skeletonlike {
+.skeletonLike {
   background-color: #ddd;
   height: 1.2rem;
   width: 1.2rem;
@@ -40,7 +40,7 @@
 }
 
 /* animation effects */
-.shimmerwrapper {
+.shimmerWrapper {
   position: absolute;
   top: 0;
   left: 0;

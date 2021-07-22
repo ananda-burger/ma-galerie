@@ -39,7 +39,7 @@
   object-fit: cover;
 }
 
-.imgtitle {
+.imageTitle {
   flex-grow: 1;
   line-height: 1.5rem;
   white-space: nowrap;
@@ -98,7 +98,7 @@
     opacity: 1;
   }
 
-  .imghoverzoom {
+  .imageHoverZoom {
     overflow: hidden;
     border-radius: 10px 10px 0 0;
   }
