@@ -1,10 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 
-import FullHeart from '../components/icons/FullHeart.js'
-import HollowHeart from '../components/icons/HollowHeart.js'
 import Expand from '../components/icons/Expand.js'
 import SkeletonImage from '../components/skeletons/SkeletonImage.js'
 import FilterBar from '../components/FilterBar.js'
+import LikeButton from '../components/LikeButton.js'
 import * as imageDomain from '../domain/image.js'
 
 import classes from './AllPictures.module.css'
@@ -17,10 +16,6 @@ const AllPicturesPage = (props) => {
     filteredImages = props.images.filter(
       imageDomain.tagFilter(props.selectedTag)
     )
-  }
-
-  const toggleLike = (id) => {
-    props.setImages(imageDomain.toggleLike(props.images, id))
   }
 
   return (
@@ -75,16 +70,11 @@ const AllPicturesPage = (props) => {
                 </Link>
                 <div className={classes.info}>
                   <div className={classes.imageTitle}>{img.title}</div>
-                  <button
-                    onClick={() => toggleLike(img.id)}
-                    className={classes.likes}
-                  >
-                    {img.isLiked ? (
-                      <FullHeart className="icon-small" />
-                    ) : (
-                      <HollowHeart className="icon-small" />
-                    )}
-                  </button>
+                  <LikeButton
+                    setImages={props.setImages}
+                    images={props.images}
+                    img={img}
+                  />
                 </div>
               </li>
             )

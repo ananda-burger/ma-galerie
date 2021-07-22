@@ -7,12 +7,6 @@
   padding: 2rem;
 }
 
-.likes {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-}
-
 .item {
   position: relative;
   background-color: black;
