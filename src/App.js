@@ -1,11 +1,11 @@
-import MainNavigation from './components/layout/MainNavigation.js'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
+import MainNavigation from './components/MainNavigation.js'
 import AllPicturesPage from './pages/AllPictures.js'
 import ContactPage from './pages/Contact.js'
 import AboutPage from './pages/About.js'
-import ImageModal from './components/modal/ImageModal.js'
+import ImageModal from './components/ImageModal.js'
 import NotFound from './pages/NotFound.js'
 import { Tags } from './domain/constants.js'
 

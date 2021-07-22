@@ -4,7 +4,7 @@ import FullHeart from '../components/icons/FullHeart.js'
 import HollowHeart from '../components/icons/HollowHeart.js'
 import Expand from '../components/icons/Expand.js'
 import SkeletonImage from '../components/skeletons/SkeletonImage.js'
-import FilterBar from '../components/layout/FilterBar.js'
+import FilterBar from '../components/FilterBar.js'
 import * as imageDomain from '../domain/image.js'
 
 import classes from './AllPictures.module.css'

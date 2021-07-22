@@ -1,4 +1,4 @@
-import { Tags } from '../../domain/constants.js'
+import { Tags } from '../domain/constants.js'
 import classes from './FilterBar.module.css'
 
 const FilterBar = (props) => {
