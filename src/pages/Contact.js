@@ -14,20 +14,32 @@ const ContactPage = () => {
           <p className={classes.text}>aburger.ananda@gmail.com</p>
         </li>
         <li className={classes.item}>
-          <Instagram />
-          <a href="https://www.instagram.com/" className={classes.link}>
+          <Instagram className={classes.icon} />
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            className={classes.link}
+          >
             Instagram
           </a>
         </li>
         <li className={classes.item}>
           <LinkedIn />
-          <a href="https://www.linkedin.com/" className={classes.link}>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            className={classes.link}
+          >
             LinkedIn
           </a>
         </li>
         <li className={classes.item}>
           <Facebook />
-          <a href="https://www.facebook.com/" className={classes.link}>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            className={classes.link}
+          >
             Facebook
           </a>
         </li>
