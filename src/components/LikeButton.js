@@ -4,9 +4,9 @@ import * as imageDomain from '../domain/image.js'
 
 import classes from './LikeButton.module.css'
 
-const LikeButton = ({ images, setImages, img }) => {
+const LikeButton = ({ thumbnails, setThumbnails, img }) => {
   const toggleLike = (id) => {
-    setImages(imageDomain.toggleLike(images, id))
+    setThumbnails(imageDomain.toggleLike(thumbnails, id))
   }
 
   return (

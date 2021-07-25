@@ -13,12 +13,17 @@ import * as imageDomain from './domain/image.js'
 const App = () => {
   const [selectedTag, setSelectedTag] = useState()
   const [images, setImages] = useState([])
+  const [thumbnails, setThumbnails] = useState([])
 
   const location = useLocation()
   const prevLocation = location.state && location.state.prevLocation
 
   useEffect(() => {
     imageDomain.fetchImages().then((i) => setImages(i))
+  }, [])
+
+  useEffect(() => {
+    imageDomain.fetchThumbnails().then((i) => setThumbnails(i))
   }, [])
 
   return (
@@ -29,8 +34,8 @@ const App = () => {
           <AllPicturesPage
             selectedTag={selectedTag}
             setSelectedTag={setSelectedTag}
-            images={images}
-            setImages={setImages}
+            thumbnails={thumbnails}
+            setThumbnails={setThumbnails}
           />
         </Route>
         <Route path="/about">

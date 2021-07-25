@@ -454,8 +454,14 @@ const toggleLike = (images, id) => {
 
 const fetchImages = async () => {
   return new Promise((resolve, _reject) => {
+    setTimeout(() => resolve(IMAGES), 1000)
+  })
+}
+
+const fetchThumbnails = async () => {
+  return new Promise((resolve, _reject) => {
     setTimeout(() => resolve(THUMB_IMAGES), 1000)
   })
 }
 
-export { tagFilter, toggleLike, fetchImages }
+export { tagFilter, toggleLike, fetchImages, fetchThumbnails }

@@ -11,14 +11,14 @@ import classes from './AllPictures.module.css'
 const AllPicturesPage = ({
   selectedTag,
   setSelectedTag,
-  images,
-  setImages
+  thumbnails,
+  setThumbnails
 }) => {
   const location = useLocation()
 
-  let filteredImages = images
+  let filteredImages = thumbnails
   if (selectedTag) {
-    filteredImages = images.filter(imageDomain.tagFilter(selectedTag))
+    filteredImages = thumbnails.filter(imageDomain.tagFilter(selectedTag))
   }
 
   return (
@@ -73,7 +73,11 @@ const AllPicturesPage = ({
                 </Link>
                 <div className={classes.info}>
                   <div className={classes.imageTitle}>{img.title}</div>
-                  <LikeButton setImages={setImages} images={images} img={img} />
+                  <LikeButton
+                    setThumbnails={setThumbnails}
+                    thumbnails={thumbnails}
+                    img={img}
+                  />
                 </div>
               </li>
             )
