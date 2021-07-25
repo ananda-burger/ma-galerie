@@ -40,7 +40,7 @@ const THUMB_IMAGES = [
     id: 5,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/Thumbnails/13-thumb_DuoeGAZPG.jpg?updatedAt=1627250645538',
-    title: "Lira's daily life",
+    title: "Everyday's fear",
     isLiked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -58,7 +58,7 @@ const THUMB_IMAGES = [
     id: 7,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/Thumbnails/10-thumb_rFGTM2gi4s.jpg?updatedAt=1627250645020',
-    title: "Lira's daily life",
+    title: 'Tension in the hallway',
     isLiked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -85,7 +85,7 @@ const THUMB_IMAGES = [
     id: 10,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/Thumbnails/03-thumb_bb9TChdq3Y.jpg?updatedAt=1627250643277',
-    title: "Lira's daily life",
+    title: 'Kindness generates kindness',
     isliked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -111,7 +111,7 @@ const THUMB_IMAGES = [
     id: 13,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/Thumbnails/12-thumb_rimg8ckzag.jpg?updatedAt=1627250645363',
-    title: "Lira's daily life antes kit",
+    title: 'Wash away those bad feelings',
     isLiked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -192,7 +192,7 @@ const THUMB_IMAGES = [
     id: 22,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/Thumbnails/08-thumb_DfPnMnOaKB.jpg?updatedAt=1627250644466',
-    title: "Lira's daily life",
+    title: 'Lunch break',
     isliked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -210,7 +210,7 @@ const THUMB_IMAGES = [
     id: 24,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/Thumbnails/06-thumb_vxilR4T8-.jpg?updatedAt=1627250643195',
-    title: "Lira's daily life",
+    title: 'Young love',
     isliked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -258,7 +258,7 @@ const IMAGES = [
     id: 5,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/High-resolution/13-high_pk_NRYwN6ft.jpg?updatedAt=1627250630453',
-    title: "Lira's daily life",
+    title: "Everyday's fear",
     isLiked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -276,7 +276,7 @@ const IMAGES = [
     id: 7,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/High-resolution/10-high_g7_jx5LCK.jpg?updatedAt=1627250630474',
-    title: "Lira's daily life",
+    title: 'Tension in the hallway',
     isLiked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -294,7 +294,7 @@ const IMAGES = [
     id: 9,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Illustrations/howl-high___3XMOcnV.jpg?updatedAt=1627233995613',
-    title: 'A heart is a heavy burden',
+    title: 'Kindness generates kindness',
     isLiked: false,
     tags: [Tags.FanArt],
     type: 'image'
@@ -329,7 +329,7 @@ const IMAGES = [
     id: 13,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/High-resolution/12-high_3rz7OxCJf.jpg?updatedAt=1627250630464',
-    title: "Lira's daily life",
+    title: 'Wash away those bad feelings',
     isLiked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -347,7 +347,7 @@ const IMAGES = [
     id: 15,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/High-resolution/09-high_y_DekmhvX5t.jpg?updatedAt=1627250630787',
-    title: "Lira's daily life",
+    title: 'Discomfort',
     isliked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -410,7 +410,7 @@ const IMAGES = [
     id: 22,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/High-resolution/08-high_tV3TXfNQxr.jpg?updatedAt=1627250630894',
-    title: "Lira's daily life",
+    title: 'Lunch break',
     isliked: false,
     tags: [Tags.Manga],
     type: 'image'
@@ -428,7 +428,7 @@ const IMAGES = [
     id: 24,
     source:
       'https://ik.imagekit.io/z9fjicafx6e/Manga/High-resolution/06-high_9c96UFUSsK.jpg?updatedAt=1627250630469',
-    title: "Lira's daily life",
+    title: 'Young love',
     isliked: false,
     tags: [Tags.Manga],
     type: 'image'
