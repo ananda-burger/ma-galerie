@@ -18,7 +18,7 @@ const AboutPage = () => {
         </p>
       </div>
       <img
-        src="https://live.staticflickr.com/65535/51315952961_f63a78065e_k.jpg"
+        src="https://ik.imagekit.io/z9fjicafx6e/Pages/about_drhvwSzdK.jpg?updatedAt=1627234946676"
         alt="Self Portrait"
         className={classes.portrait}
       />

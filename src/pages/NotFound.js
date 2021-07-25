@@ -6,7 +6,7 @@ const NotFound = () => {
     <div className={classes.container}>
       <div className={classes.info}>
         <img
-          src="https://live.staticflickr.com/65535/51319473592_4e609971e6_k.jpg"
+          src="https://ik.imagekit.io/z9fjicafx6e/Pages/404_rQXms7PVy.jpg?updatedAt=1627235210608"
           alt="404 Page not found"
           className={classes.image}
         />

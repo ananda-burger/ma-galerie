@@ -33,7 +33,7 @@ const ContactPage = () => {
         </li>
       </ul>
       <img
-        src="https://live.staticflickr.com/65535/51315197802_831b74ee0b_c.jpg"
+        src="https://ik.imagekit.io/z9fjicafx6e/Pages/contact_QBRGeLwav.jpg?updatedAt=1627234946678"
         alt="Self Portrait"
         className={classes.portrait}
       />
