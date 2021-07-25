@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -7,6 +8,7 @@ import ContactPage from './pages/Contact.js'
 import AboutPage from './pages/About.js'
 import ImageModal from './components/ImageModal.js'
 import NotFound from './pages/NotFound.js'
+import * as imageDomain from './domain/image.js'
 
 const App = () => {
   const [selectedTag, setSelectedTag] = useState()
@@ -14,6 +16,10 @@ const App = () => {
 
   const location = useLocation()
   const prevLocation = location.state && location.state.prevLocation
+
+  useEffect(() => {
+    imageDomain.fetchImages().then((i) => setImages(i))
+  }, [])
 
   return (
     <div>

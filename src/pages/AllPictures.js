@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import Expand from '../components/icons/Expand.js'
@@ -21,10 +20,6 @@ const AllPicturesPage = ({
   if (selectedTag) {
     filteredImages = images.filter(imageDomain.tagFilter(selectedTag))
   }
-
-  useEffect(() => {
-    imageDomain.fetchImages().then((i) => setImages(i))
-  }, [])
 
   return (
     <div>
