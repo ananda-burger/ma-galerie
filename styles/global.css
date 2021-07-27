@@ -128,6 +128,15 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+b {
+  font-weight: bold;
+}
+
 a:hover {
   color: #ff69b4;
 }

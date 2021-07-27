@@ -1,4 +1,4 @@
-const Photograph = () => {
+export default function Photograph() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,5 +15,3 @@ const Photograph = () => {
     </svg>
   )
 }
-
-export default Photograph

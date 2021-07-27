@@ -1,30 +1,27 @@
 import classes from './ImageModal.module.css'
 import Close from './icons/Close.js'
-import NotFound from '../pages/NotFound.js'
+import NotFound from '../pages/404.js'
 
-import { useHistory, useParams } from 'react-router-dom'
-
-const ImageModal = ({ images }) => {
-  const history = useHistory()
-  const id = parseInt(useParams().id, 10)
-  const image = images.find((img) => img.id === id)
-
+export default function ImageModal({ images, imageId, setImageId }) {
+  const image = images.find((img) => img.id === imageId)
+  console.log(image)
   if (!image) return <NotFound />
 
-  const close = (e) => {
-    e.stopPropagation()
-    history.push('/')
-  }
+  const close = (_event) => setImageId(undefined)
 
   return (
     <div className={classes.backdrop} onClick={close}>
       <input className={classes.input} autoFocus onKeyUp={close} />
       {image.type === 'video' ? (
         <video controls muted height="100%" className={classes.image}>
-          <source src={image.source} type="video/mp4" />
+          <source src={image.highResolutionSource} type="video/mp4" />
         </video>
       ) : (
-        <img alt={image.title} src={image.source} className={classes.image} />
+        <img
+          alt={image.title}
+          src={image.highResolutionSource}
+          className={classes.image}
+        />
       )}
       <button className={classes.close} onClick={close}>
         <Close className={classes.x} />
@@ -32,5 +29,3 @@ const ImageModal = ({ images }) => {
     </div>
   )
 }
-
-export default ImageModal

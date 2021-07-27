@@ -1,4 +1,4 @@
-const Email = () => {
+export default function Email() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,5 +14,3 @@ const Email = () => {
     </svg>
   )
 }
-
-export default Email

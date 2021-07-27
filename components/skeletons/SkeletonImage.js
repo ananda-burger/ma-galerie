@@ -1,7 +1,7 @@
 import classes from './SkeletonImage.module.css'
 import Photograph from '../icons/Photograph.js'
 
-const SkeletonImage = () => {
+export default function SkeletonImage() {
   return (
     <div className={classes.skeletonWrapper}>
       <div className={classes.skeletonImage}>
@@ -17,5 +17,3 @@ const SkeletonImage = () => {
     </div>
   )
 }
-
-export default SkeletonImage

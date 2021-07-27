@@ -1,4 +1,4 @@
-const FullHeart = (props) => {
+export default function FullHeart(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,5 +15,3 @@ const FullHeart = (props) => {
     </svg>
   )
 }
-
-export default FullHeart

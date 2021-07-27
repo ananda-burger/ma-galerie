@@ -1,4 +1,4 @@
-const HollowHeart = (props) => {
+export default function Expand(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,11 +11,9 @@ const HollowHeart = (props) => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={1}
-        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+        strokeWidth={2}
+        d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
       />
     </svg>
   )
 }
-
-export default HollowHeart

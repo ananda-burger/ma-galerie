@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
-import classes from './NotFound.module.css'
+import Link from 'next/link'
+import classes from './404.module.css'
 
-const NotFound = () => {
+export default function NotFound() {
   return (
     <div className={classes.container}>
       <div className={classes.info}>
@@ -12,12 +12,12 @@ const NotFound = () => {
         />
         <p className={classes.title}>Whoops!</p>
         <p className={classes.text}>Have you lost yourself in the art world?</p>
-        <Link to="/">
+        <Link href="/">
+          <a>
           <div className={classes.home}>Return Home</div>
+          </a>
         </Link>
       </div>
     </div>
   )
 }
-
-export default NotFound

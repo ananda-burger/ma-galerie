@@ -1,4 +1,4 @@
-const LinkedIn = () => {
+export default function LinkedIn() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,5 +10,3 @@ const LinkedIn = () => {
     </svg>
   )
 }
-
-export default LinkedIn
