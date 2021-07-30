@@ -137,10 +137,6 @@ b {
   font-weight: bold;
 }
 
-a:hover {
-  color: #ff69b4;
-}
-
 .icon-small {
   height: 1.5rem;
   width: 1.5rem;
@@ -151,4 +147,10 @@ a:hover {
   height: 2rem;
   width: 2rem;
   cursor: pointer;
+}
+
+@media (hover: hover) {
+    a:hover {
+        color: #ff69b4;
+    }
 }
