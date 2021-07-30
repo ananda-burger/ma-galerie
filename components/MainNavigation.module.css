@@ -1,8 +1,3 @@
-/* a { */
-/*   color: white; */
-/*   text-decoration: none; */
-/* } */
-
 .head {
   background: black;
   display: flex;
@@ -29,9 +24,9 @@
 }
 
 .nav {
-  font-size: 12.8px;
-  font-size: 0.8rem;
-  margin-right: 0.5rem;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  margin-right: 0.8rem;
 }
 
 .navigation {
@@ -56,8 +51,8 @@
   }
 
   .nav {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 17.6px;
+    font-size: 1.1rem;
     margin-right: 1rem;
     transition: 0.2s ease;
   }
