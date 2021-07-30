@@ -4,7 +4,6 @@ import NotFound from '../pages/404.js'
 
 export default function ImageModal({ images, imageId, setImageId }) {
   const image = images.find((img) => img.id === imageId)
-  console.log(image)
   if (!image) return <NotFound />
 
   const close = (_event) => setImageId(undefined)
