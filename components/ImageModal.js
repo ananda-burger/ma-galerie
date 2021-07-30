@@ -11,7 +11,6 @@ export default function ImageModal({ images, imageId, setImageId }) {
 
   return (
     <div className={classes.backdrop} onClick={close}>
-      <input className={classes.input} autoFocus onKeyUp={close} />
       {image.type === 'video' ? (
         <video controls muted height="100%" className={classes.image}>
           <source src={image.highResolutionSource} type="video/mp4" />
