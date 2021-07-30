@@ -1,7 +1,6 @@
 {
-  "name": "my-pictures-app",
+  "name": "ma-galerie",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "next": "^11.0.1",
     "react": "^17.0.2",
