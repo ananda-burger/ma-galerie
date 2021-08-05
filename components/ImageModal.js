@@ -31,10 +31,6 @@ export default function ImageModal({ images, imageId, setImageId }) {
     }
   }
 
-  const zoomImage = (event) => {
-    event.stopPropagation()
-  }
-
   return (
     <div>
       <div className={classes.backdrop} onClick={close}>
@@ -47,7 +43,6 @@ export default function ImageModal({ images, imageId, setImageId }) {
             alt={image.title}
             src={image.highResolutionSource}
             className={classes.image}
-            onClick={zoomImage}
           />
         )}
         <button className={classes.close} onClick={close}>
