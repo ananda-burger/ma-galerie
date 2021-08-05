@@ -11,7 +11,7 @@
 .backdrop {
   position: fixed;
   z-index: 998;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
   top: 0;
@@ -26,14 +26,23 @@
   right: 5%;
   color: white;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.75);
-  border: none;
+  background-color: black;
+  border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.x {
+  transition: 0.2s ease;
 }
 
 .close:hover .x {
   color: #ff69b4;
+}
+
+.close:hover {
+  border: 1px solid #ff69b4;
 }
 
 .input {
