@@ -149,8 +149,8 @@ b {
   cursor: pointer;
 }
 
-@media (hover: hover) {
-    a:hover {
-        color: #ff69b4;
-    }
+@media (pointer: fine) {
+  a:hover {
+    color: #ff69b4;
+  }
 }
