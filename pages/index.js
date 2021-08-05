@@ -29,7 +29,11 @@ export default function Home() {
   return (
     <Layout>
       {imageId && (
-        <ImageModal images={images} imageId={imageId} setImageId={setImageId} />
+        <ImageModal
+          images={filteredImages}
+          imageId={imageId}
+          setImageId={setImageId}
+        />
       )}
       <div>
         {filteredImages.length === 0 && (
