@@ -10,7 +10,12 @@
   z-index: 997;
 }
 
-.transition {
+.notSelectedTitle {
+  transition: 0.2s ease;
+}
+
+.selectedTitle {
+  color: #ff69b4;
   transition: 0.2s ease;
 }
 
@@ -27,6 +32,15 @@
   font-size: 17.6px;
   font-size: 1.1rem;
   margin-right: 0.8rem;
+  transition: 0.2s ease;
+}
+
+.selectedNav {
+  color: #ff69b4;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  margin-right: 0.8rem;
+  transition: 0.2s ease;
 }
 
 .navigation {
