@@ -46,6 +46,7 @@
   border-radius: 10px 10px 0 0;
   height: 400px;
   overflow: hidden;
+  position: relative;
 }
 
 .info {

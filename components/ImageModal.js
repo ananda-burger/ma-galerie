@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import classes from './ImageModal.module.css'
 import Close from './icons/Close.js'
 import NotFound from '../pages/404.js'
@@ -35,15 +37,18 @@ export default function ImageModal({ images, imageId, setImageId }) {
     <div>
       <div className={classes.backdrop} onClick={close}>
         {image.type === 'video' ? (
-          <video controls muted height="100%" className={classes.image}>
+          <video controls muted height="100%" className={classes.video}>
             <source src={image.highResolutionSource} type="video/mp4" />
           </video>
         ) : (
-          <img
-            alt={image.title}
-            src={image.highResolutionSource}
-            className={classes.image}
-          />
+          <div className={classes.imageContainer}>
+            <Image
+              alt={image.title}
+              src={image.highResolutionSource}
+              layout="fill"
+              className={classes.image}
+            />
+          </div>
         )}
         <button className={classes.close} onClick={close}>
           <Close className={classes.x} />

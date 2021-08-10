@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import classes from './contact.module.css'
 import LinkedIn from '../components/icons/LinkedIn.js'
 import Facebook from '../components/icons/Facebook.js'
@@ -46,11 +48,14 @@ export default function ContactPage() {
             </a>
           </li>
         </ul>
-        <img
-          src="https://ik.imagekit.io/z9fjicafx6e/Pages/contact_QBRGeLwav.jpg?updatedAt=1627234946678"
-          alt="Self Portrait"
-          className={classes.portrait}
-        />
+        <div className={classes.imageContainer}>
+          <Image
+            src="https://ik.imagekit.io/z9fjicafx6e/Pages/contact_QBRGeLwav.jpg?updatedAt=1627234946678"
+            alt="Self Portrait"
+            height={400}
+            width={310.4}
+          />
+        </div>
       </div>
     </Layout>
   )

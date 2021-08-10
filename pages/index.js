@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 import ImageModal from '../components/ImageModal.js'
 import Layout from '../components/Layout.js'
@@ -70,9 +71,11 @@ export default function Home() {
                           <source src={img.thumbnailSource} type="video/mp4" />
                         </video>
                       ) : (
-                        <img
+                        <Image
                           src={img.thumbnailSource}
                           alt={img.title}
+                          layout="fill"
+                          objectFit="cover"
                           className={classes.image}
                         />
                       )}

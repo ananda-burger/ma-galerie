@@ -1,4 +1,4 @@
-.portrait {
+.imageContainer {
   max-width: 90%;
   z-index: -1;
 }
@@ -30,12 +30,12 @@
 }
 
 @media (min-width: 420px) {
-  .portrait {
+  .imageContainer {
     position: fixed;
     left: 0;
     bottom: 0;
     max-height: 400px;
-    max-width: 100%;
+    max-width: 95%;
     z-index: -1;
   }
 
