@@ -1,4 +1,4 @@
-import { tagFilter, toggleLike, fetchImages } from '../../src/domain/image.js'
+import { tagFilter, toggleLike, fetchImages } from '../../domain/image.js'
 
 describe('.tagFilter', () => {
   const image = { tags: ['pudim', 'banana'] }
@@ -47,8 +47,10 @@ describe('.fetchImages', () => {
     expect(images.length).toBeGreaterThan(1)
     expect(images[0]).toEqual({
       id: 1,
-      source:
-        'https://live.staticflickr.com/65535/51315444616_dcd1002c18_c.jpg',
+      thumbnailSource:
+        'https://ik.imagekit.io/z9fjicafx6e/thumbnails/we-meet-again-thumb_4B_gwVUex.jpg?updatedAt=1627234034400',
+      highResolutionSource:
+        'https://ik.imagekit.io/z9fjicafx6e/Illustrations/we-meet-again-high_h2ig8cfT6y.jpg?updatedAt=1627233997575',
       title: 'We meet again',
       isLiked: false,
       tags: ['original'],
